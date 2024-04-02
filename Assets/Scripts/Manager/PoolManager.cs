@@ -48,11 +48,13 @@ public class Pool
         return obj;
     }
 
-    public void Push(GameObject obj)
+    public void Push(GameObject obj, bool parent = false)
     {
         obj.SetActive(false);
+        if (parent) obj.transform.SetParent(_root);
         _pool.Enqueue(obj);
     }
+
 
     private GameObject CreateNewObject()
     {
@@ -60,6 +62,7 @@ public class Pool
         obj.name = _prefab.name;
         return obj;
     }
+
 }
 
 
@@ -79,14 +82,17 @@ public class PoolManager
         return _pools[prefab.name].Pop();
     }
 
-    public bool Push(GameObject obj)
+    public bool Push(GameObject obj, bool parent = false)
     {
         if (!_pools.ContainsKey(obj.name)) return false;
-        _pools[obj.name].Push(obj);
+        if(parent) _pools[obj.name].Push(obj, true);
+        else _pools[obj.name].Push(obj);
         return true;
     }
 
-    private void CreatePool(GameObject prefab, int initialSize)
+    
+
+    public void CreatePool(GameObject prefab, int initialSize)
     {
         Pool pool = new Pool(prefab, initialSize);
         _pools.Add(prefab.name, pool);

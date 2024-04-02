@@ -8,11 +8,17 @@ public class GameScene : BaseScene
     {
         if (!base.Initialize()) return false;
 
-        Main.Resource.InstantiatePrefab("Floor");
+        // 바닥 생성
+        Main.Resource.InstantiatePrefab(Define.PrefabName.floor);
 
+        // 플레이어 생성
+        Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
+        Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanEnemy);
 
         return true;
     }
+
+    
 
 
 }
