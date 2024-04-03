@@ -11,6 +11,9 @@ public class GameScene : BaseScene
         // 바닥 생성
         Main.Resource.InstantiatePrefab(Define.PrefabName.floor);
 
+        // 조이스틱 생성
+        Main.Resource.InstantiatePrefab(Define.PrefabName.joystick);
+
         // 플레이어 생성
         Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
         Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanEnemy);
