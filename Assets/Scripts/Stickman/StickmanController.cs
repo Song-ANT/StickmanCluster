@@ -9,7 +9,7 @@ public class StickmanController : MonoBehaviour
 {
 
     private Rigidbody rb;
-    private float _distance = 1f;
+    private float _distance = 0.5f;
     private float _radius = 1f;
     private float _moveSpeed = 5f;
     private bool _isFormat;
@@ -64,8 +64,8 @@ public class StickmanController : MonoBehaviour
 
         for (int i = 0; i < _stickmans.Count; i++)
         {
-            _distance = Random.Range(1f, 1.5f);
-            _radius = Random.Range(1f, 1.5f);
+            //_distance = Random.Range(0.5f, 1f);
+            //_radius = Random.Range(0.5f, 1f);
 
             var x = _distance * Mathf.Sqrt(i) * Mathf.Cos(i * _radius);
             var y = _distance * Mathf.Sqrt(i) * Mathf.Sin(i * _radius);
@@ -96,9 +96,12 @@ public class StickmanController : MonoBehaviour
 
         for(int i=0; i< _stickmanRotates.Count; i++)
         {
-
-            Quaternion newRotation = Quaternion.LookRotation(joyVec);
-            _stickmanRotates[i].MoveRotation(newRotation);
+            if (joyVec != Vector3.zero)
+            {
+                _stickmanRotates[i].velocity = Vector3.zero;
+                Quaternion newRotation = Quaternion.LookRotation(joyVec);
+                _stickmanRotates[i].MoveRotation(newRotation);
+            }
             
         }
     }
