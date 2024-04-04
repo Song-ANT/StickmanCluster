@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,16 +13,19 @@ public class StickmanController : MonoBehaviour
     private float _distance = 0.5f;
     private float _radius = 1f;
     private float _moveSpeed = 5f;
-    private bool _isFormat;
+    public bool _isRun;
 
     private List<GameObject> _stickmans = new List<GameObject>();
     private List<Rigidbody> _stickmanRotates = new List<Rigidbody>();
+
+    
 
     #region Init
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         MakeStickman(1);
+        
     }
 
     private void Update()
@@ -89,6 +93,15 @@ public class StickmanController : MonoBehaviour
         var joyVec = new Vector3(JoyStick.Instance.joyVec.x, 0, JoyStick.Instance.joyVec.y);
         var move = transform.position + joyVec;
 
+
+        if (joyVec == Vector3.zero)
+        {
+            _isRun = false;
+            return;
+        }
+
+        _isRun = true;
+
         transform.position = new Vector3(
             Mathf.Lerp(transform.position.x, move.x, Time.deltaTime * _moveSpeed),
             0,
@@ -105,6 +118,8 @@ public class StickmanController : MonoBehaviour
             
         }
     }
+
+
 
     
 }

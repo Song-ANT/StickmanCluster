@@ -89,7 +89,7 @@ public class ResourceManager
             return null;
         }
 
-        if (pooling) // Todo : 잘 작동하는지 확인하기
+        if (pooling)
         {
             GameObject temp = Main.Pool.Pop(prefab);
             temp.transform.position = _position;
