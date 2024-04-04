@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1148996641093047614}
   - component: {fileID: 7224039491970740347}
   - component: {fileID: 2326130735130330792}
+  - component: {fileID: -516290940058985004}
   m_Layer: 0
   m_Name: StickmanCube
   m_TagString: Untagged
@@ -133,3 +134,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-516290940058985004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417665443199256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf9f360b011d0a1428427fbd502e95ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

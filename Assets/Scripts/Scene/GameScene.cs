@@ -16,7 +16,7 @@ public class GameScene : BaseScene
 
         // 플레이어 생성
         Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
-        Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanEnemy);
+        //Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanEnemy);
 
         return true;
     }

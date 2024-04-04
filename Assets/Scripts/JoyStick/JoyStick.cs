@@ -21,7 +21,7 @@ public class JoyStick : MonoBehaviour
                     instance = instanceContanier.AddComponent<JoyStick>();
                 }
             }
-            return Instance;
+            return instance;
         }
     }
 
