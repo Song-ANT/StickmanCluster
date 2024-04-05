@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2625691397354830615}
   - component: {fileID: -9176620573556595617}
   - component: {fileID: -2648437179176314529}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: StickmanPlayer
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,4 +72,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfeb8d0793402db448e3810a810cf783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isRun: 0

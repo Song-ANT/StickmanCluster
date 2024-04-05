@@ -16,7 +16,8 @@ public class GameScene : BaseScene
 
         // 플레이어 생성
         Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
-        //Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanEnemy);
+        
+        Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanEnemy);
 
         // 음식 생성
         Main.Spawn.InitIntantiateFood(100, Define.PrefabName.food);

@@ -8,9 +8,12 @@ using UnityEngine.EventSystems;
 
 public abstract class StickmanController : MonoBehaviour
 {
+    protected int _level;
+
 
     private float _distance = 0.5f;
     private float _radius = 1f;    
+
 
     private List<GameObject> _stickmans = new List<GameObject>();
     protected List<Stickman> _stickmanChilds = new List<Stickman>();
@@ -20,11 +23,9 @@ public abstract class StickmanController : MonoBehaviour
     
 
     #region Init
-    private void Awake()
+    protected void Awake()
     {
-        MakeStickman(1);
-        
-        // Todo : 적 컴포너는 달아넣기 
+        MakeStickman(1); 
     }
 
     private void Update()
@@ -86,8 +87,8 @@ public abstract class StickmanController : MonoBehaviour
     }
     
 
-    public List<Stickman> GetStickmenChilds()
+    public int GetLevel()
     {
-        return _stickmanChilds;
+        return _level;
     }
 }
