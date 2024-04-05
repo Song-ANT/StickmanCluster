@@ -9,21 +9,19 @@ using UnityEngine.EventSystems;
 public class StickmanController : MonoBehaviour
 {
 
-    private Rigidbody rb;
     private float _distance = 0.5f;
     private float _radius = 1f;
-    private float _moveSpeed = 5f;
-    public bool _isRun;
+    private bool _isPlayer;
 
     private List<GameObject> _stickmans = new List<GameObject>();
-    private List<Rigidbody> _stickmanRotates = new List<Rigidbody>();
+    private List<Stickman> _childStickmans = new List<Stickman>();
 
     
 
     #region Init
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        _isPlayer = gameObject.layer == LayerMask.NameToLayer("Player");
         MakeStickman(1);
         
     }
@@ -41,11 +39,6 @@ public class StickmanController : MonoBehaviour
         }
 
     }
-
-    private void FixedUpdate()
-    {
-        MoveStickman();
-    }
     #endregion
 
 
@@ -57,7 +50,10 @@ public class StickmanController : MonoBehaviour
         {
             var temp = Main.Resource.InstantiatePrefab(Define.PrefabName.stickman, transform, true);
             _stickmans.Add(temp);
-            _stickmanRotates.Add(temp.GetComponent<Rigidbody>());
+            _childStickmans.Add(temp.GetComponent<Stickman>());
+
+            if(_isPlayer) temp.AddComponent<Stickman_Player_Movement>();
+            // Todo: Àû add component;
         }
 
         FormatStickman();
@@ -71,53 +67,58 @@ public class StickmanController : MonoBehaviour
             //_distance = Random.Range(0.5f, 1f);
             //_radius = Random.Range(0.5f, 1f);
 
-            var x = _distance * Mathf.Sqrt(i) * Mathf.Cos(i * _radius);
-            var y = _distance * Mathf.Sqrt(i) * Mathf.Sin(i * _radius);
+            var x = _stickmans[0].transform.position.x + _distance * Mathf.Sqrt(i) * Mathf.Cos(i * _radius);
+            var y = _stickmans[0].transform.position.z + _distance * Mathf.Sqrt(i) * Mathf.Sin(i * _radius);
 
             var newPos = new Vector3(x, 0, y);
 
-            //var child = transform.GetChild(i);
             var child = _stickmans[i].transform;
 
-            if (Vector3.Distance(child.localPosition, newPos) > _distance)
-            {
-                child.position = transform.position;
-            }
+            //if (Vector3.Distance(child.localPosition, newPos) > _distance)
+            //{
+            //    child.position = transform.position;
+            //}
 
-            child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
+            //if (Vector3.Distance(_stickmans[0].transform.position, newPos) > _distance)
+            //{
+            //    child.position = _stickmans[0].transform.position;
+            //}
+
+            //child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
+            child.position = newPos;
         }
     }
 
-    private void MoveStickman()
-    {
-        var joyVec = new Vector3(JoyStick.Instance.joyVec.x, 0, JoyStick.Instance.joyVec.y);
-        var move = transform.position + joyVec;
+    //private void MoveStickman()
+    //{
+    //    var joyVec = new Vector3(JoyStick.Instance.joyVec.x, 0, JoyStick.Instance.joyVec.y);
+    //    var move = transform.position + joyVec;
 
 
-        if (joyVec == Vector3.zero)
-        {
-            _isRun = false;
-            return;
-        }
+    //    if (joyVec == Vector3.zero)
+    //    {
+    //        _isRun = false;
+    //        return;
+    //    }
 
-        _isRun = true;
+    //    _isRun = true;
 
-        transform.position = new Vector3(
-            Mathf.Lerp(transform.position.x, move.x, Time.deltaTime * _moveSpeed),
-            0,
-            Mathf.Lerp(transform.position.z, move.z, Time.deltaTime * _moveSpeed));
+    //    transform.position = new Vector3(
+    //        Mathf.Lerp(transform.position.x, move.x, Time.deltaTime * _moveSpeed),
+    //        0,
+    //        Mathf.Lerp(transform.position.z, move.z, Time.deltaTime * _moveSpeed));
 
-        for(int i=0; i< _stickmanRotates.Count; i++)
-        {
-            if (joyVec != Vector3.zero)
-            {
-                _stickmanRotates[i].velocity = Vector3.zero;
-                Quaternion newRotation = Quaternion.LookRotation(joyVec);
-                _stickmanRotates[i].MoveRotation(newRotation);
-            }
+    //    for(int i=0; i< _stickmanRotates.Count; i++)
+    //    {
+    //        if (joyVec != Vector3.zero)
+    //        {
+    //            _stickmanRotates[i].velocity = Vector3.zero;
+    //            Quaternion newRotation = Quaternion.LookRotation(joyVec);
+    //            _stickmanRotates[i].MoveRotation(newRotation);
+    //        }
             
-        }
-    }
+    //    }
+    //}
 
 
 
