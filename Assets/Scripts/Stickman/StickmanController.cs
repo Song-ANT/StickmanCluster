@@ -6,26 +6,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class StickmanController : MonoBehaviour
+public abstract class StickmanController : MonoBehaviour
 {
 
-    private Rigidbody rb;
     private float _distance = 0.5f;
-    private float _radius = 1f;
-    private float _moveSpeed = 5f;
-    public bool _isRun;
+    private float _radius = 1f;    
 
     private List<GameObject> _stickmans = new List<GameObject>();
-    private List<Rigidbody> _stickmanRotates = new List<Rigidbody>();
+    protected List<Stickman> _stickmanChilds = new List<Stickman>();
+
+    public event Action OnChildChangeEvent;
 
     
 
     #region Init
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         MakeStickman(1);
         
+        // Todo : 적 컴포너는 달아넣기 
     }
 
     private void Update()
@@ -42,10 +41,7 @@ public class StickmanController : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        MoveStickman();
-    }
+    
     #endregion
 
 
@@ -57,9 +53,10 @@ public class StickmanController : MonoBehaviour
         {
             var temp = Main.Resource.InstantiatePrefab(Define.PrefabName.stickman, transform, true);
             _stickmans.Add(temp);
-            _stickmanRotates.Add(temp.GetComponent<Rigidbody>());
+            _stickmanChilds.Add(temp.GetComponent<Stickman>());
         }
 
+        OnChildChangeEvent?.Invoke();
         FormatStickman();
     }
 
@@ -87,39 +84,10 @@ public class StickmanController : MonoBehaviour
             child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
         }
     }
-
-    private void MoveStickman()
-    {
-        var joyVec = new Vector3(JoyStick.Instance.joyVec.x, 0, JoyStick.Instance.joyVec.y);
-        var move = transform.position + joyVec;
-
-
-        if (joyVec == Vector3.zero)
-        {
-            _isRun = false;
-            return;
-        }
-
-        _isRun = true;
-
-        transform.position = new Vector3(
-            Mathf.Lerp(transform.position.x, move.x, Time.deltaTime * _moveSpeed),
-            0,
-            Mathf.Lerp(transform.position.z, move.z, Time.deltaTime * _moveSpeed));
-
-        for(int i=0; i< _stickmanRotates.Count; i++)
-        {
-            if (joyVec != Vector3.zero)
-            {
-                _stickmanRotates[i].velocity = Vector3.zero;
-                Quaternion newRotation = Quaternion.LookRotation(joyVec);
-                _stickmanRotates[i].MoveRotation(newRotation);
-            }
-            
-        }
-    }
-
-
-
     
+
+    public List<Stickman> GetStickmenChilds()
+    {
+        return _stickmanChilds;
+    }
 }

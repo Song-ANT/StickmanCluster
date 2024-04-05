@@ -8,36 +8,41 @@ public class Stickman : MonoBehaviour
     private Animator _animator;
     private bool _isRunParameter;
 
+    public Rigidbody rb;
+
     private void Start()
     {
         _controller = transform.root.GetComponent<StickmanController>();
-        _animator = GetComponent<Animator>();
+        _animator = transform.GetComponent<Animator>();
+        rb = transform.GetComponent<Rigidbody>();
     }
 
-    private void Update()
-    {
-        
-        if (_isRunParameter == false && _controller._isRun == true)
-        {
-            _isRunParameter = true;
-            _animator.SetBool("IsRun", true);
-        }
-        else if(_isRunParameter == true && _controller._isRun == false)
-        {
-            _isRunParameter = false;
-            _animator.SetBool("IsRun", false);
-        }
-    }
+    
 
+
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Food"))
         {
-            Debug.Log(other.name + _controller.gameObject.name);
             _controller.MakeStickman(1);
             other.GetComponent<Stickman_Food>().Eated();
         }
+    }
+
+    public void SetRunAnimation()
+    {
+        if (_isRunParameter) return;
+        _isRunParameter = true;
+        _animator.SetBool("IsRun", true);
+    }
+
+    public void SetIdleAnimation()
+    {
+        if (!_isRunParameter) return;
+        _isRunParameter = false;
+        _animator.SetBool("IsRun", false);
     }
 
 }
