@@ -102,12 +102,12 @@ public class Stickman_Enemy_Controller : StickmanController
 
         if (_isPursuitOtherSnake) return INode.ENodeState.EFailure;
 
-        var overlapColliders = Physics.OverlapSphere(transform.position, _detectOtherStickmanRange, LayerMask.GetMask("Stickman"));
+        var overlapColliders = Physics.OverlapSphere(transform.position, _detectOtherStickmanRange, LayerMask.GetMask("Head"));
         if (overlapColliders != null && overlapColliders.Length > 0)
         {
             foreach (var collider in overlapColliders)
             {
-                if (!collider.CompareTag("Head")) continue;
+                //if (!collider.CompareTag("Head")) continue;
                 _detectStickman = collider.transform;
                 _otherStickmanController = _detectStickman.transform.GetComponent<StickmanController>();
 

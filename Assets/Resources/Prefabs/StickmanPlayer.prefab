@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2625691397354830615}
   - component: {fileID: -2648437179176314529}
   - component: {fileID: 4427772727878681117}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: StickmanPlayer
-  m_TagString: Head
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

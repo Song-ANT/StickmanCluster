@@ -8,26 +8,28 @@ public class Stickman : MonoBehaviour
     private Animator _animator;
     private bool _isRunParameter;
     private Material _color;
+    private int _rootCode;
     
-
-    public Rigidbody rb;
+    [HideInInspector] public Rigidbody rb;
     public GameObject body;
 
-    private void Start()
+
+
+    public void Initialize()
     {
         _controller = transform.root.GetComponent<StickmanController>();
         _animator = transform.GetComponent<Animator>();
         rb = transform.GetComponent<Rigidbody>();
+        _rootCode = transform.root.GetHashCode();
         //_color = Main.Resource.Load<Material>(Define.PrefabName.stickmanMaterial);
         
         //_color.color = _controller.GetColor();
         body.GetComponent<SkinnedMeshRenderer>().material.color = _controller.GetColor();
+
     }
 
     
 
-
-    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,6 +37,21 @@ public class Stickman : MonoBehaviour
         {
             _controller.MakeStickman(1);
             other.GetComponent<Stickman_Food>().Eated();
+        }
+
+        if(other.gameObject.layer == LayerMask.NameToLayer("Stickman"))
+        {
+            if (other.transform.root.GetHashCode() == _rootCode) return;
+            if (!other.transform.root.TryGetComponent<StickmanController>(out StickmanController otherController)) return;
+
+            if(otherController.GetLevel() < _controller.GetLevel())
+            {
+                _controller.MakeStickman(1);
+            }
+            else
+            {
+                Eated();
+            }
         }
     }
 
@@ -50,6 +67,19 @@ public class Stickman : MonoBehaviour
         if (!_isRunParameter) return;
         _isRunParameter = false;
         _animator.SetBool("IsRun", false);
+    }
+
+    public void Eated()
+    {
+        RemoveFromList();
+        _controller.SetLevel(-1);
+        Main.Pool.Push(gameObject, true);
+    }
+
+    public void RemoveFromList()
+    {
+        // StickmanController를 통해 리스트에서 이 인스턴스를 제거
+        _controller?.RemoveStickman(this);
     }
 
 }

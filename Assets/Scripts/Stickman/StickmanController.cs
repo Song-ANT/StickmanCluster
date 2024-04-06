@@ -20,7 +20,6 @@ public abstract class StickmanController : MonoBehaviour
     private List<GameObject> _stickmans = new List<GameObject>();
     protected List<Stickman> _stickmanChilds = new List<Stickman>();
 
-    public event Action OnChildChangeEvent;
 
     private Color _color;
     
@@ -28,9 +27,9 @@ public abstract class StickmanController : MonoBehaviour
     #region Init
     protected virtual void Awake()
     {
+        SetColor();
         MakeStickman(1);
         _level = 1;
-        SetColor();
     }
 
     private void Update()
@@ -44,6 +43,8 @@ public abstract class StickmanController : MonoBehaviour
         {
             MakeStickman(1);
         }
+
+        
 
     }
 
@@ -59,11 +60,12 @@ public abstract class StickmanController : MonoBehaviour
         {
             var temp = Main.Resource.InstantiatePrefab(Define.PrefabName.stickman, transform, true);
             _stickmans.Add(temp);
-            _stickmanChilds.Add(temp.GetComponent<Stickman>());
+            var stickman = temp.GetComponent<Stickman>();
+            stickman.Initialize();
+            _stickmanChilds.Add(stickman);
             _level++;
         }
 
-        OnChildChangeEvent?.Invoke();
         FormatStickman();
     }
 
@@ -98,6 +100,12 @@ public abstract class StickmanController : MonoBehaviour
         return _level;
     }
 
+    public void SetLevel(int num)
+    {
+        _level += num;
+        
+    }
+
 
 
     public void SetColor()
@@ -105,10 +113,26 @@ public abstract class StickmanController : MonoBehaviour
         float colorX = Random.Range(0, 1f);
         float colory = Random.Range(0, 1f);
         float colorz = Random.Range(0, 1f);
-        _color = string.Compare(gameObject.name, "StickmanPlayer(Clone)") == 0 ? Color.blue : new Color(colorX, colory, colorz);
+        _color = gameObject.CompareTag("Player") ? Color.blue : new Color(colorX, colory, colorz);
         
-        Debug.Log(gameObject.name);
     }
 
     public Color GetColor() => _color;
+
+
+    public void RemoveStickman(Stickman stickman)
+    {
+        if (_stickmanChilds.Contains(stickman))
+        {
+            _stickmanChilds.Remove(stickman);
+            if(_stickmanChilds.Count == 0) AllStickmanDie();
+        }
+    }
+
+    private void AllStickmanDie()
+    {
+        Destroy(gameObject);
+    }
+
 }
+

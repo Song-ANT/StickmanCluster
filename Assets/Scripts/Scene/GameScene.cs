@@ -17,7 +17,8 @@ public class GameScene : BaseScene
         // 敲饭捞绢 积己
         Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
         
-        Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanEnemy);
+        // 利 积己
+        Main.Spawn.InitIntantiateEnemy(50, Define.PrefabName.stickmanEnemy);
 
         // 澜侥 积己
         Main.Spawn.InitIntantiateFood(100, Define.PrefabName.food);
