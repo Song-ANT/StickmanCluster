@@ -105,8 +105,9 @@ public abstract class StickmanController : MonoBehaviour
         float colorX = Random.Range(0, 1f);
         float colory = Random.Range(0, 1f);
         float colorz = Random.Range(0, 1f);
-        _color = gameObject.layer == LayerMask.NameToLayer("Player") ? Color.blue : new Color(colorX, colory, colorz);
-        Debug.Log(_color);
+        _color = string.Compare(gameObject.name, "StickmanPlayer(Clone)") == 0 ? Color.blue : new Color(colorX, colory, colorz);
+        
+        Debug.Log(gameObject.name);
     }
 
     public Color GetColor() => _color;

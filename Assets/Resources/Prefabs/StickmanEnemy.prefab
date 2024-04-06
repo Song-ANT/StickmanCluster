@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2625691397354830615}
   - component: {fileID: 1688267979683673799}
+  - component: {fileID: 7488677830659779096}
   m_Layer: 6
   m_Name: StickmanEnemy
   m_TagString: Head
@@ -44,3 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad85eed2c7abfea4190b488ae512a8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &7488677830659779096
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473845595643663209}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5
+  m_Center: {x: 0, y: 2.5, z: 0}

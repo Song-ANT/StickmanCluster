@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
             float x = Random.Range(-50f, 50f);
             float y = Random.Range(-50f, 50f);
 
-            Vector3 pos = new Vector3(x, 0.5f, y);
+            Vector3 pos = new Vector3(x, 0, y);
             Quaternion rot = Quaternion.identity;
 
             GameObject food = Main.Resource.InstantiatePrefab(initObject, pos, rot, true);
