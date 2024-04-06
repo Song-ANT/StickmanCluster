@@ -12,7 +12,10 @@ public class Define
         public static string stickmanEnemy = "StickmanEnemy";
         public static string joystick = "JoyStickPanel";
         public static string food = "Stickman_Food";
+        public static string stickmanMaterial = "Skin_Color";
     }
+
+   
 
 
     

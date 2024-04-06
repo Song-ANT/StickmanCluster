@@ -2,9 +2,11 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 public abstract class StickmanController : MonoBehaviour
 {
@@ -20,12 +22,15 @@ public abstract class StickmanController : MonoBehaviour
 
     public event Action OnChildChangeEvent;
 
+    private Color _color;
     
 
     #region Init
-    protected void Awake()
+    protected virtual void Awake()
     {
-        MakeStickman(1); 
+        MakeStickman(1);
+        _level = 1;
+        SetColor();
     }
 
     private void Update()
@@ -55,6 +60,7 @@ public abstract class StickmanController : MonoBehaviour
             var temp = Main.Resource.InstantiatePrefab(Define.PrefabName.stickman, transform, true);
             _stickmans.Add(temp);
             _stickmanChilds.Add(temp.GetComponent<Stickman>());
+            _level++;
         }
 
         OnChildChangeEvent?.Invoke();
@@ -91,4 +97,17 @@ public abstract class StickmanController : MonoBehaviour
     {
         return _level;
     }
+
+
+
+    public void SetColor()
+    {
+        float colorX = Random.Range(0, 1f);
+        float colory = Random.Range(0, 1f);
+        float colorz = Random.Range(0, 1f);
+        _color = gameObject.layer == LayerMask.NameToLayer("Player") ? Color.blue : new Color(colorX, colory, colorz);
+        Debug.Log(_color);
+    }
+
+    public Color GetColor() => _color;
 }

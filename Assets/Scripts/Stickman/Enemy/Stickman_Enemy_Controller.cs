@@ -8,7 +8,7 @@ public class Stickman_Enemy_Controller : StickmanController
     private BTRunner _btRunner = null;
 
     private float _detectOtherStickmanRange = 10f;
-    private float _detectFoodRange = 150f;
+    private float _detectFoodRange = 15f;
     private float _moveSpeed = 5f;
     
     private bool _isRandomMoved = false;
@@ -22,7 +22,7 @@ public class Stickman_Enemy_Controller : StickmanController
     private Transform _otherStickman;
 
 
-    private void Awake()
+    protected override void Awake()
     {
         base.Awake();
         _btRunner = new BTRunner(SettingBT());
@@ -51,8 +51,8 @@ public class Stickman_Enemy_Controller : StickmanController
                     (
                         new List<INode>()
                         {
-                            new ActionNode(CheckDetectOtherSnake),
-                            new ActionNode(MoveToEatOtherSnake)
+                            new ActionNode(CheckDetectOtherStickman),
+                            new ActionNode(MoveToEatOtherStickman)
                         }
                     ),
                     new SequenceNode
@@ -70,7 +70,6 @@ public class Stickman_Enemy_Controller : StickmanController
 
     private void MoveStickman()
     {
-        Debug.Log("快府模备 框流老 临 舅酒夸?");
         var move = transform.position + moveDirection;
 
 
@@ -88,7 +87,6 @@ public class Stickman_Enemy_Controller : StickmanController
                 //_stickmanChilds[i].rb.MoveRotation(newRotation);
 
                 _stickmanChilds[i].transform.rotation = Quaternion.LookRotation(moveDirection);
-                Debug.Log(_stickmanChilds[i].transform.rotation);
 
                 _stickmanChilds[i].SetRunAnimation();
             }
@@ -98,7 +96,7 @@ public class Stickman_Enemy_Controller : StickmanController
 
 
     #region Detect & Move Node
-    private INode.ENodeState CheckDetectOtherSnake()
+    private INode.ENodeState CheckDetectOtherStickman()
     {
         if (_otherStickman != null) return INode.ENodeState.ESuccess;
 
@@ -116,7 +114,7 @@ public class Stickman_Enemy_Controller : StickmanController
                 if (_otherStickmanController.GetLevel() < _level)
                 {
                     _otherStickman = _detectStickman;
-                    StartCoroutine(DetectOtherSnakeTime());
+                    StartCoroutine(DetectOtherStickmanTime());
                     return INode.ENodeState.ESuccess;
                 }
             }
@@ -129,14 +127,14 @@ public class Stickman_Enemy_Controller : StickmanController
         return INode.ENodeState.EFailure;
     }
 
-    private IEnumerator DetectOtherSnakeTime()
+    private IEnumerator DetectOtherStickmanTime()
     {
         yield return new WaitForSeconds(4f);
         _otherStickman = null;
-        StartCoroutine(CoolDownDetectOtherSnake());
+        StartCoroutine(CoolDownDetectOtherStickman());
     }
 
-    private IEnumerator CoolDownDetectOtherSnake()
+    private IEnumerator CoolDownDetectOtherStickman()
     {
         _isPursuitOtherSnake = true;
         yield return new WaitForSeconds(4f);
@@ -144,7 +142,7 @@ public class Stickman_Enemy_Controller : StickmanController
     }
 
 
-    private INode.ENodeState MoveToEatOtherSnake()
+    private INode.ENodeState MoveToEatOtherStickman()
     {
         if (_otherStickman != null)
         {

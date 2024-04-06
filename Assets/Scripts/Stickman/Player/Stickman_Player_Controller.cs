@@ -6,8 +6,7 @@ public class Stickman_Player_Controller : StickmanController
 {
     
     private float _moveSpeed = 5f;
-
-
+    
 
     private void FixedUpdate()
     {
@@ -41,5 +40,7 @@ public class Stickman_Player_Controller : StickmanController
 
         }
     }
+
+    
 
 }

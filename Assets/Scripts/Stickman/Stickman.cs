@@ -7,14 +7,21 @@ public class Stickman : MonoBehaviour
     private StickmanController _controller;
     private Animator _animator;
     private bool _isRunParameter;
+    private Material _color;
+    
 
     public Rigidbody rb;
+    public GameObject body;
 
     private void Start()
     {
         _controller = transform.root.GetComponent<StickmanController>();
         _animator = transform.GetComponent<Animator>();
         rb = transform.GetComponent<Rigidbody>();
+        //_color = Main.Resource.Load<Material>(Define.PrefabName.stickmanMaterial);
+        
+        //_color.color = _controller.GetColor();
+        body.GetComponent<SkinnedMeshRenderer>().material.color = _controller.GetColor();
     }
 
     
