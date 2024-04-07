@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Define 
 {
+    public struct SceneName
+    {
+        public static string title = "TitleScene";
+        public static string game = "GameScene";
+    }
+
+
     public struct PrefabName
     {
         public static string floor = "Floor";
@@ -19,6 +26,7 @@ public class Define
    
 
 
-    
+
+
 
 }
