@@ -15,18 +15,24 @@ public class GameScene : BaseScene
         Main.Resource.InstantiatePrefab(Define.PrefabName.joystick);
 
         // 敲饭捞绢 积己
-        Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
-        
+        Main.Spawn.InitInstantiatePlayer(Define.PrefabName.stickmanPlayer);
+
         // 利 积己
-        Main.Spawn.InitIntantiateEnemy(50, Define.PrefabName.stickmanEnemy);
+        Main.Spawn.InitInstantiateEnemy(50, Define.PrefabName.stickmanEnemy);
 
         // 澜侥 积己
-        Main.Spawn.InitIntantiateFood(100, Define.PrefabName.food);
+        Main.Spawn.InitInstantiateFood(100, Define.PrefabName.food);
 
         return true;
     }
 
-    
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K)) 
+        {
+            Main.Cinemachine.PlusCameraDistanceStart();
+        }
+    }
 
 
 }

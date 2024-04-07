@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class SpawnManager 
 {
-    public void InitIntantiateEnemy(int initCount, string initObject)
+    public void InitInstantiatePlayer(string initObject)
+    {
+        var player = Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
+        Main.Cinemachine.SetPlayerStickmanCamera(player.transform);
+    }
+
+    public void InitInstantiateEnemy(int initCount, string initObject)
     {
         for (int i = 0; i < initCount; i++)
         {
@@ -15,7 +21,7 @@ public class SpawnManager
     }
 
 
-    public void InitIntantiateFood(int initCount, string initObject)
+    public void InitInstantiateFood(int initCount, string initObject)
     {
         for (int i = 0; i < initCount; i++)
         {

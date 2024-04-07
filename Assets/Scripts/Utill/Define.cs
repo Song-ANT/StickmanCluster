@@ -13,6 +13,7 @@ public class Define
         public static string joystick = "JoyStickPanel";
         public static string food = "Stickman_Food";
         public static string stickmanMaterial = "Skin_Color";
+        public static string playerCamera = "PlayerCamera";
     }
 
    

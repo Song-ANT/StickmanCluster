@@ -36,14 +36,14 @@ public class Main : MonoBehaviour
     private readonly ResourceManager _resource = new();
     private readonly StickmanManager _stickman = new();
     private readonly SpawnManager _spawn = new();
-
+    private readonly CinemachineManager _cinemachine = new();
 
 
     public static PoolManager Pool => Instance?._pool;
     public static ResourceManager Resource => Instance?._resource;
     public static StickmanManager Stickman => Instance?._stickman;
     public static SpawnManager Spawn => Instance?._spawn;
-
+    public static CinemachineManager Cinemachine => Instance?._cinemachine;
 
 
 }
