@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BTRunner : MonoBehaviour
+public class BTRunner 
 {
     INode _rootNode;
 

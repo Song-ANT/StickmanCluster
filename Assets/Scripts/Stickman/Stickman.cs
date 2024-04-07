@@ -7,7 +7,6 @@ public class Stickman : MonoBehaviour
     private StickmanController _controller;
     private Animator _animator;
     private bool _isRunParameter;
-    private Material _color;
     private int _rootCode;
     
     [HideInInspector] public Rigidbody rb;
@@ -25,9 +24,7 @@ public class Stickman : MonoBehaviour
         _animator.enabled = true;
         rb = transform.GetComponent<Rigidbody>();
         _rootCode = transform.root.GetHashCode();
-        //_color = Main.Resource.Load<Material>(Define.PrefabName.stickmanMaterial);
-        
-        //_color.color = _controller.GetColor();
+
         body.GetComponent<SkinnedMeshRenderer>().material.color = _controller.GetColor();
 
     }
@@ -78,13 +75,16 @@ public class Stickman : MonoBehaviour
         SetIdleAnimation();
         RemoveFromList();
         _controller.SetLevel(-1);
+        _controller.FormatStickman();
+        _controller = null;
+
         Main.Pool.Push(gameObject, true);
     }
 
     public void RemoveFromList()
     {
         // StickmanController를 통해 리스트에서 이 인스턴스를 제거
-        _controller?.RemoveStickman(this);
+        _controller?.RemoveStickman(this.gameObject, this);
     }
 
 }

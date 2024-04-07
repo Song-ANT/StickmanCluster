@@ -74,8 +74,8 @@ public abstract class StickmanController : MonoBehaviour
 
         for (int i = 0; i < _stickmans.Count; i++)
         {
-            //_distance = Random.Range(0.5f, 1f);
-            //_radius = Random.Range(0.5f, 1f);
+            _distance = Random.Range(0.5f, 0.6f);
+            _radius = Random.Range(0.9f, 1f);
 
             var x = _distance * Mathf.Sqrt(i) * Mathf.Cos(i * _radius);
             var y = _distance * Mathf.Sqrt(i) * Mathf.Sin(i * _radius);
@@ -85,7 +85,7 @@ public abstract class StickmanController : MonoBehaviour
             //var child = transform.GetChild(i);
             var child = _stickmans[i].transform;
 
-            if (Vector3.Distance(child.localPosition, newPos) > _distance)
+            if (Vector3.Distance(child.transform.position, transform.position + newPos) > _distance)
             {
                 child.position = transform.position;
             }
@@ -93,7 +93,7 @@ public abstract class StickmanController : MonoBehaviour
             child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
         }
     }
-    
+
 
     public int GetLevel()
     {
@@ -120,12 +120,14 @@ public abstract class StickmanController : MonoBehaviour
     public Color GetColor() => _color;
 
 
-    public void RemoveStickman(Stickman stickman)
+    public void RemoveStickman(GameObject stickmanObject, Stickman stickman)
     {
         if (_stickmanChilds.Contains(stickman))
         {
+            _stickmans.Remove(stickmanObject);
             _stickmanChilds.Remove(stickman);
-            if(_stickmanChilds.Count == 0) AllStickmanDie();
+            
+            if (_stickmanChilds.Count == 0) AllStickmanDie();
         }
     }
 
