@@ -14,11 +14,15 @@ public class Stickman : MonoBehaviour
     public GameObject body;
 
 
+    private void Awake()
+    {
+        _animator = transform.GetComponent<Animator>();
+    }
 
     public void Initialize()
     {
         _controller = transform.root.GetComponent<StickmanController>();
-        _animator = transform.GetComponent<Animator>();
+        _animator.enabled = true;
         rb = transform.GetComponent<Rigidbody>();
         _rootCode = transform.root.GetHashCode();
         //_color = Main.Resource.Load<Material>(Define.PrefabName.stickmanMaterial);
@@ -71,6 +75,7 @@ public class Stickman : MonoBehaviour
 
     public void Eated()
     {
+        SetIdleAnimation();
         RemoveFromList();
         _controller.SetLevel(-1);
         Main.Pool.Push(gameObject, true);
