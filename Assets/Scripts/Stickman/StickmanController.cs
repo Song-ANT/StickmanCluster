@@ -12,9 +12,9 @@ public abstract class StickmanController : MonoBehaviour
 {
     protected int _level;
 
-
     private float _distance = 0.5f;
-    private float _radius = 1f;    
+    private float _radius = 1f;
+    private bool _isPlayer;
 
 
     private List<GameObject> _stickmans = new List<GameObject>();
@@ -22,31 +22,17 @@ public abstract class StickmanController : MonoBehaviour
 
 
     private Color _color;
-    
+
 
     #region Init
     protected virtual void Awake()
     {
+        _isPlayer = gameObject.CompareTag("Player");
         SetColor();
         MakeStickman(1);
         _level = 1;
     }
 
-    private void Update()
-    {
-        if(transform.root.name == "StickmanPlayer" && Input.GetKeyDown(KeyCode.I)) 
-        {
-            MakeStickman(1); 
-        }
-
-        if(transform.root.name != "StickmanPlayer" && Input.GetKeyDown(KeyCode.O))
-        {
-            MakeStickman(1);
-        }
-
-        
-
-    }
 
     
     #endregion
@@ -113,7 +99,7 @@ public abstract class StickmanController : MonoBehaviour
         float colorX = Random.Range(0, 1f);
         float colory = Random.Range(0, 1f);
         float colorz = Random.Range(0, 1f);
-        _color = gameObject.CompareTag("Player") ? Color.blue : new Color(colorX, colory, colorz);
+        _color = _isPlayer ? Color.blue : new Color(colorX, colory, colorz);
         
     }
 
@@ -133,7 +119,13 @@ public abstract class StickmanController : MonoBehaviour
 
     private void AllStickmanDie()
     {
+        if (_isPlayer)
+        {
+            Main.Pool.Clear();
+            Main.UI.SetSceneUI<GameOverSceneUI>();
+        }
         Destroy(gameObject);
+        
     }
 
 }

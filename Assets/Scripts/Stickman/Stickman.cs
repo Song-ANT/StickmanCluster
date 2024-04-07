@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,11 @@ public class Stickman : MonoBehaviour
     private void Awake()
     {
         _animator = transform.GetComponent<Animator>();
+    }
+
+    private void OnDestroy()
+    {
+        transform.DOKill();
     }
 
     public void Initialize()

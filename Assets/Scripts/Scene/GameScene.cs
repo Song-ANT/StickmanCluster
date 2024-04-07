@@ -8,6 +8,8 @@ public class GameScene : BaseScene
     {
         if (!base.Initialize()) return false;
 
+        Main.Pool.Clear();
+
         // 官蹿 积己
         Main.Resource.InstantiatePrefab(Define.PrefabName.floor);
 
@@ -18,7 +20,7 @@ public class GameScene : BaseScene
         Main.Spawn.InitInstantiatePlayer(Define.PrefabName.stickmanPlayer);
 
         // 利 积己
-        Main.Spawn.InitInstantiateEnemy(50, Define.PrefabName.stickmanEnemy);
+        Main.Spawn.InitInstantiateEnemy(2, Define.PrefabName.stickmanEnemy);
 
         // 澜侥 积己
         Main.Spawn.InitInstantiateFood(100, Define.PrefabName.food);
