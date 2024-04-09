@@ -11,7 +11,8 @@ public class CinemachineManager
     private Transform _player;
     private CinemachineVirtualCamera _playerCamera;
 
-    public event Action OnCameraDistanceEvent;
+    public event Action OnCameraDistanceIncreaseEvent;
+    public event Action OnCameraDistanceDecreaseEvent;
 
     public void SetPlayerStickmanCamera(Transform player)
     {
@@ -22,8 +23,9 @@ public class CinemachineManager
         playerStickmanCamera.Initialized(player);
     }
 
-    public void PlusCameraDistanceStart()
+    public void CameraDistanceStart(bool isPositive)
     {
-        OnCameraDistanceEvent?.Invoke();
+        if(isPositive) OnCameraDistanceIncreaseEvent?.Invoke();
+        else OnCameraDistanceDecreaseEvent?.Invoke();
     }
 }

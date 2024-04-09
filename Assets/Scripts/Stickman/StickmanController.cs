@@ -49,7 +49,7 @@ public abstract class StickmanController : MonoBehaviour
             var stickman = temp.GetComponent<Stickman>();
             stickman.Initialize();
             _stickmanChilds.Add(stickman);
-            _level++;
+            SetLevel(true);
         }
 
         FormatStickman();
@@ -86,10 +86,11 @@ public abstract class StickmanController : MonoBehaviour
         return _level;
     }
 
-    public void SetLevel(int num)
+    public void SetLevel(bool isPositive)
     {
-        _level += num;
-        
+        _level += isPositive ? 1 : -1;
+
+        if (_isPlayer && _level % 10 == 0) Main.Cinemachine.CameraDistanceStart(isPositive);
     }
 
 

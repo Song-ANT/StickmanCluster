@@ -80,7 +80,7 @@ public class Stickman : MonoBehaviour
     {
         SetIdleAnimation();
         RemoveFromList();
-        _controller.SetLevel(-1);
+        _controller.SetLevel(false);
         _controller.FormatStickman();
         _controller = null;
 

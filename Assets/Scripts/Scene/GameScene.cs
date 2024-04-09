@@ -31,13 +31,6 @@ public class GameScene : BaseScene
         return true;
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.K)) 
-        {
-            Main.Cinemachine.PlusCameraDistanceStart();
-        }
-    }
 
 
 }
