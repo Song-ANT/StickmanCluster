@@ -44,7 +44,7 @@ public abstract class StickmanController : MonoBehaviour
     {
         for (int i = 0; i < num; i++)
         {
-            var temp = Main.Resource.InstantiatePrefab(Define.PrefabName.stickman, transform, true);
+            var temp = Main.Resource.InstantiatePrefab(Define.PrefabName.Stickman, transform, true);
             _stickmans.Add(temp);
             var stickman = temp.GetComponent<Stickman>();
             stickman.Initialize();

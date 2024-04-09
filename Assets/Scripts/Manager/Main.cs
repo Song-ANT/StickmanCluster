@@ -36,6 +36,7 @@ public class Main : MonoBehaviour
     private readonly ResourceManager _resource = new();
     private readonly UIManager _ui = new UIManager();
     private readonly StickmanManager _stickman = new();
+    private readonly GameManager _game = new GameManager();
     private readonly SpawnManager _spawn = new();
     private readonly CinemachineManager _cinemachine = new();
 
@@ -44,6 +45,7 @@ public class Main : MonoBehaviour
     public static ResourceManager Resource => Instance?._resource;
     public static UIManager UI => Instance?._ui;
     public static StickmanManager Stickman => Instance?._stickman;
+    public static GameManager Game => Instance?._game;
     public static SpawnManager Spawn => Instance?._spawn;
     public static CinemachineManager Cinemachine => Instance?._cinemachine;
 

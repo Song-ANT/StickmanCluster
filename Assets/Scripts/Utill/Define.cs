@@ -6,22 +6,25 @@ public class Define
 {
     public struct SceneName
     {
-        public static string title = "TitleScene";
-        public static string game = "GameScene";
+        public static string Title = "TitleScene";
+        public static string Game = "GameScene";
+        public static string Boss = "BossScene";
     }
 
 
     public struct PrefabName
     {
-        public static string floor = "Floor";
-        public static string stickman = "Stickman";
-        public static string stickmanPlayer = "StickmanPlayer";
-        public static string stickmanEnemy = "StickmanEnemy";
-        public static string joystick = "JoyStickPanel";
-        public static string food = "Stickman_Food";
-        public static string stickmanMaterial = "Skin_Color";
-        public static string playerCamera = "PlayerCamera";
+        public static string Floor = "Floor";
+        public static string Stickman = "Stickman";
+        public static string StickmanPlayer = "StickmanPlayer";
+        public static string StickmanEnemy = "StickmanEnemy";
+        public static string Joystick = "JoyStickPanel";
+        public static string Food = "Stickman_Food";
+        public static string StickmanMaterial = "Skin_Color";
+        public static string PlayerCamera = "PlayerCamera";
     }
+
+    public static int StartTime = 10;
 
    
 

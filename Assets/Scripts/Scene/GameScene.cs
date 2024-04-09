@@ -11,19 +11,22 @@ public class GameScene : BaseScene
         Main.Pool.Clear();
 
         // 官蹿 积己
-        Main.Resource.InstantiatePrefab(Define.PrefabName.floor);
+        Main.Resource.InstantiatePrefab(Define.PrefabName.Floor);
 
         // 炼捞胶平 积己
-        Main.Resource.InstantiatePrefab(Define.PrefabName.joystick);
+        Main.Resource.InstantiatePrefab(Define.PrefabName.Joystick);
 
         // 敲饭捞绢 积己
-        Main.Spawn.InitInstantiatePlayer(Define.PrefabName.stickmanPlayer);
+        Main.Spawn.InitInstantiatePlayer(Define.PrefabName.StickmanPlayer);
 
         // 利 积己
-        Main.Spawn.InitInstantiateEnemy(2, Define.PrefabName.stickmanEnemy);
+        Main.Spawn.InitInstantiateEnemy(50, Define.PrefabName.StickmanEnemy);
 
         // 澜侥 积己
-        Main.Spawn.InitInstantiateFood(100, Define.PrefabName.food);
+        Main.Spawn.InitInstantiateFood(100, Define.PrefabName.Food);
+
+        // 霸烙 纠 UI 积己
+        Main.UI.SetSceneUI<GameSceneUI>();
 
         return true;
     }

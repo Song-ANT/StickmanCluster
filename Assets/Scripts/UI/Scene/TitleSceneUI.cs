@@ -24,6 +24,6 @@ public class TitleSceneUI : UI_Scene
 
     private void GameStart()
     {
-        SceneManager.LoadScene(Define.SceneName.game);
+        SceneManager.LoadScene(Define.SceneName.Game);
     }
 }

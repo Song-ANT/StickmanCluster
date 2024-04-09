@@ -6,8 +6,28 @@ public class SpawnManager
 {
     public void InitInstantiatePlayer(string initObject)
     {
-        var player = Main.Resource.InstantiatePrefab(Define.PrefabName.stickmanPlayer);
+        var player = Main.Resource.InstantiatePrefab(initObject);
         Main.Cinemachine.SetPlayerStickmanCamera(player.transform);
+    }
+
+    public void InitInstantiatePlayer(int initCount, string initObject)
+    {
+        var player = Main.Resource.InstantiatePrefab(initObject);
+        Main.Cinemachine.SetPlayerStickmanCamera(player.transform);
+
+        StickmanController controller = player.GetComponent<StickmanController>();
+        controller.MakeStickman(initCount - 1);
+    }
+
+    public void InitInstantiateBoss(string initObject)
+    {
+        var Boss = Main.Resource.InstantiatePrefab(initObject);
+
+        Boss.transform.position = new Vector3(0, 0, 30);
+        Boss.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+
+        StickmanController controller = Boss.GetComponent<StickmanController>();
+        controller.MakeStickman(Main.Game.BossLv - 1);
     }
 
     public void InitInstantiateEnemy(int initCount, string initObject)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stickman_Enemy_Controller : StickmanController
 {
@@ -70,8 +71,8 @@ public class Stickman_Enemy_Controller : StickmanController
 
     private void MoveStickman()
     {
+        if (SceneManager.GetActiveScene().name.Equals(Define.SceneName.Boss)) moveDirection = transform.forward;
         var move = transform.position + moveDirection;
-
 
         transform.position = new Vector3(
             Mathf.Lerp(transform.position.x, move.x, Time.deltaTime * _moveSpeed),

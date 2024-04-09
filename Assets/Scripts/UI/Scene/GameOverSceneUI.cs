@@ -30,11 +30,11 @@ public class GameOverSceneUI : UI_Scene
 
     private void RestartBtnClicked()
     {
-        SceneManager.LoadScene(Define.SceneName.game);
+        SceneManager.LoadScene(Define.SceneName.Game);
     }
 
     private void MainmenuBtnClicked()
     {
-        SceneManager.LoadScene(Define.SceneName.title);
+        SceneManager.LoadScene(Define.SceneName.Title);
     }
 }

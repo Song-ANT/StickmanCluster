@@ -70,7 +70,6 @@ public class JoyStick : MonoBehaviour
     {
         BGStick.gameObject.SetActive(false);
         joyVec = Vector3.zero;
-        //Todo : 애니메이션 아이들 상태로 바꾸기 
     }
 
     #endregion

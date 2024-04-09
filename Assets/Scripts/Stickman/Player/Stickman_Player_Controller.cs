@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stickman_Player_Controller : StickmanController
 {
@@ -18,6 +19,8 @@ public class Stickman_Player_Controller : StickmanController
         var joyVec = new Vector3(JoyStick.Instance.joyVec.x, 0, JoyStick.Instance.joyVec.y);
         var move = transform.position + joyVec;
 
+        bool isBossScene = SceneManager.GetActiveScene().name.Equals(Define.SceneName.Boss);
+        if (isBossScene) move = transform.position + transform.forward;
 
         transform.position = new Vector3(
             Mathf.Lerp(transform.position.x, move.x, Time.deltaTime * _moveSpeed),
@@ -26,6 +29,7 @@ public class Stickman_Player_Controller : StickmanController
 
         for (int i = 0; i < _stickmanChilds.Count; i++)
         {
+            if (isBossScene) { _stickmanChilds[i].SetRunAnimation(); continue; }
             if (joyVec != Vector3.zero)
             {
                 _stickmanChilds[i].rb.velocity = Vector3.zero;
@@ -35,11 +39,10 @@ public class Stickman_Player_Controller : StickmanController
                 _stickmanChilds[i].SetRunAnimation();
             }
             else _stickmanChilds[i].SetIdleAnimation();
-            
-
 
         }
     }
+
 
     
 

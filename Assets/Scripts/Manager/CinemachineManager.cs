@@ -16,7 +16,7 @@ public class CinemachineManager
     public void SetPlayerStickmanCamera(Transform player)
     {
         _player = player;
-        var playerCameraObject = Main.Resource.InstantiatePrefab(Define.PrefabName.playerCamera);
+        var playerCameraObject = Main.Resource.InstantiatePrefab(Define.PrefabName.PlayerCamera);
         _playerCamera = playerCameraObject.GetComponent<CinemachineVirtualCamera>();
         var playerStickmanCamera = _playerCamera.GetComponent<PlayerStickmanCamera>();
         playerStickmanCamera.Initialized(player);
