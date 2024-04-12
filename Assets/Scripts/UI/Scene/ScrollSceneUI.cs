@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class TitleScene : BaseScene
+public class ScrollSceneUI : UI_Scene
 {
 
     public override bool Initialize()
     {
         if (!base.Initialize()) return false;
 
-        //Main.UI.SetSceneUI<TitleSceneUI>();
-        Main.UI.SetSceneUI<ScrollSceneUI>();
-
 
         return true;
     }
+
+
+
 }
