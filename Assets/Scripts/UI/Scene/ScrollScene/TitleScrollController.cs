@@ -15,9 +15,10 @@ public class TitleScrollController : MonoBehaviour, IBeginDragHandler, IDragHand
     private float curPos;
     private int targetIndex;
     private bool isDrag;
+    private bool isStart;
 
 
-    private void Start()
+    public void Initialize()
     {
         distance = 1f / (Size - 1f);
         for (int i = 0; i < Size; i++) pos[i] = distance * i;
@@ -27,9 +28,17 @@ public class TitleScrollController : MonoBehaviour, IBeginDragHandler, IDragHand
         targetPos = pos[1];
     }
 
+
     private void Update()
     {
-        if(!isDrag) scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
+        if (!isStart)
+        {
+            scrollbar.value = pos[1];
+            isStart = true;
+            return;
+        }
+
+        if (!isDrag) scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
     }
         
 

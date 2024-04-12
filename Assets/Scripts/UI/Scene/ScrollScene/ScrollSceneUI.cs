@@ -11,6 +11,9 @@ public class ScrollSceneUI : UI_Scene
     {
         if (!base.Initialize()) return false;
 
+        var controller = GetComponentInChildren<TitleScrollController>();
+        controller.Initialize();
+
 
         return true;
     }
