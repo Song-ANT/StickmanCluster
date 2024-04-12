@@ -21,6 +21,10 @@ public class TitleScrollController : MonoBehaviour, IBeginDragHandler, IDragHand
     {
         distance = 1f / (Size - 1f);
         for (int i = 0; i < Size; i++) pos[i] = distance * i;
+
+        targetIndex = 1;
+        scrollbar.value = pos[1];
+        targetPos = pos[1];
     }
 
     private void Update()
