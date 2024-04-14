@@ -73,4 +73,32 @@ public class SpawnManager
             stickman_Top_Parts.Add(i + 1, Main.Resource.Load<GameObject>($"Top_{i + 1}"));
         }
     }
+
+    public void UpdateSkinnedMeshRenderer(Transform rootBone, GameObject targetSkinObject, bool includeInactive)
+    {
+        if (!targetSkinObject.TryGetComponent<SkinnedMeshRenderer>(out SkinnedMeshRenderer targetSkin) || rootBone == null)
+        {
+            Debug.Log("TargetSkin or RootBone is not set.");
+            return;
+        }
+
+        
+
+        Transform[] newBones = new Transform[targetSkin.bones.Length];
+        Transform[] existingBones = rootBone.GetComponentsInChildren<Transform>(includeInactive);
+        for (int i = 0; i < targetSkin.bones.Length; i++)
+        {
+            Transform foundBone = System.Array.Find(existingBones, bone => bone.name == targetSkin.bones[i].name);
+            if (foundBone != null)
+            {
+                newBones[i] = foundBone;
+            }
+            else
+            {
+                Debug.Log("Bone " + targetSkin.bones[i].name + " not found!");
+            }
+        }
+        targetSkin.bones = newBones;
+        Debug.Log("Skinned Mesh Renderer updated.");
+    }
 }

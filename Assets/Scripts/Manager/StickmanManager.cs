@@ -11,6 +11,10 @@ public class StickmanData
     public string name;
     public int count;
 
+    public GameObject head_parts = null;
+    public GameObject top_parts = null;
+    public GameObject bottom_parts = null;
+
     public bool isPlayer;
 
 }
@@ -21,7 +25,7 @@ public class StickmanManager
     private int index = 0;
    
 
-    List<StickmanData> _stickmanData = new List<StickmanData>();
+    public List<StickmanData> _stickmanData = new List<StickmanData>();
 
     
     public StickmanData AddStickmanData(Transform stickman, int count, string name = null)
@@ -36,5 +40,14 @@ public class StickmanManager
         return data;
     }
 
+
+    public void SetStickmanParts(StickmanData data, GameObject part)
+    {
+        if (part.layer != LayerMask.NameToLayer("StickmanModel")) return;
+        
+        if(part.CompareTag("Parts_Head")) data.head_parts = part;
+        else if(part.CompareTag("Parts_Top")) data.top_parts = part;
+        else if(part.CompareTag("Parts_Bottom")) data.bottom_parts = part;
+    }
 }
 

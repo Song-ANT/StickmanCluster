@@ -10,7 +10,8 @@ public class ScrollSceneUI_Shop : MonoBehaviour
     public GameObject[] shopObject;
     private GameObject curObject;
 
-    private List<GameObject> stickmanParts = new List<GameObject>();
+    private GameObject _modelStickman;
+    private Transform _rootBorn;
 
     public List<GameObject> parts_Head = new List<GameObject>();
     public List<GameObject> parts_Top = new List<GameObject>();
@@ -21,8 +22,20 @@ public class ScrollSceneUI_Shop : MonoBehaviour
         curObject = shopObject[0];
         curObject.SetActive(true);
 
-        Main.Resource.InstantiatePrefab("Stickman_Shop");
+        _modelStickman = Main.Resource.InstantiatePrefab("Stickman_Shop");
+        var a = Utilities.FindChildrenWithTag(_modelStickman.transform, "rootBone", true);
+        _rootBorn = a[0].transform;
+        
+
         Main.Resource.InstantiatePrefab("TitleShopCamera");
+
+        var head = Instantiate(Main.Spawn.stickman_Head_Parts[1], _modelStickman.transform);
+
+
+
+        Main.Spawn.UpdateSkinnedMeshRenderer(_rootBorn, head, true);
+
+
 
 
         //for(int i = 1; i< 10; i++)
