@@ -12,6 +12,8 @@ public class TitleScene : BaseScene
         //Main.UI.SetSceneUI<TitleSceneUI>();
         Main.UI.SetSceneUI<ScrollSceneUI>();
 
+        Main.Resource.InstantiatePrefab("Stickman_Shop");
+        Main.Resource.InstantiatePrefab("TitleShopCamera");
 
         return true;
     }

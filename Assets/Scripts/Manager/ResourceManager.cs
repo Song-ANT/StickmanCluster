@@ -17,6 +17,7 @@ public class ResourceManager
         ResourcesToDictionary<GameObject>();
         //ResourcesToDictionary<InputActionAsset>();
         ResourcesToDictionary<Material>();
+        ResourcesToDictionary<Camera>();
 
         
 

@@ -50,6 +50,7 @@ public class Stickman : MonoBehaviour
         {
             if (other.transform.root.GetHashCode() == _rootCode) return;
             if (!other.transform.root.TryGetComponent<StickmanController>(out StickmanController otherController)) return;
+            if (Time.timeScale < 1) return;
 
             if(otherController.GetLevel() < _controller.GetLevel())
             {

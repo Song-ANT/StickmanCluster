@@ -24,7 +24,7 @@ public class Define
         public static string PlayerCamera = "PlayerCamera";
     }
 
-    public static int StartTime = 90;
+    public static int StartTime = 30;
 
    
 
