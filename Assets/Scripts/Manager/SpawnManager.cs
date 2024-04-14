@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SpawnManager 
 {
+    public Dictionary<int, GameObject> stickman_Head_Parts = new Dictionary<int, GameObject>();
+    public Dictionary<int, GameObject> stickman_Top_Parts = new Dictionary<int, GameObject>();
+    public Dictionary<int, GameObject> stickman_Bottom_Parts = new Dictionary<int, GameObject>();
+
+
     public void InitInstantiatePlayer(string initObject)
     {
         var player = Main.Resource.InstantiatePrefab(initObject);
@@ -56,6 +61,16 @@ public class SpawnManager
 
             food.transform.position = pos;
             food.transform.rotation = rot;
+        }
+    }
+
+    public void InitializeStickmanParts()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            stickman_Head_Parts.Add(i+1, Main.Resource.Load<GameObject>($"Head_{i+1}"));
+            stickman_Bottom_Parts.Add(i + 1, Main.Resource.Load<GameObject>($"Bottom_{i + 1}"));
+            stickman_Top_Parts.Add(i + 1, Main.Resource.Load<GameObject>($"Top_{i + 1}"));
         }
     }
 }

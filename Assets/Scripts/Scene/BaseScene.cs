@@ -11,6 +11,7 @@ public class BaseScene : MonoBehaviour
         if (!Main.Resource.Loaded)
         {
             Main.Resource.ResourcesAssign();
+            Main.Spawn.InitializeStickmanParts();
         }
 
         Initialize();
