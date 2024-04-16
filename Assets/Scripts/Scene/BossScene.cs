@@ -9,6 +9,7 @@ public class BossScene : BaseScene
         if (!base.Initialize()) return false;
 
         Main.Pool.Clear();
+        Main.Stickman.ClearStickmanData();
 
         // 官蹿 积己
         Main.Resource.InstantiatePrefab(Define.PrefabName.Floor);
@@ -18,7 +19,8 @@ public class BossScene : BaseScene
         JoyStick.Instance.Drop();
 
         // 敲饭捞绢 积己
-        Main.Spawn.InitInstantiatePlayer(30, Define.PrefabName.StickmanPlayer);
+        //Main.Spawn.InitInstantiatePlayer(30, Define.PrefabName.StickmanPlayer);
+        Main.Spawn.InitInstantiatePlayer(Define.PrefabName.StickmanPlayer);
 
         // 利 积己
         Main.Spawn.InitInstantiateBoss(Define.PrefabName.StickmanEnemy);

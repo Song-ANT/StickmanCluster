@@ -50,7 +50,6 @@ public class PlayerStickmanCamera : MonoBehaviour
 
     public void IncreaseDistanceCamera()
     {
-        Debug.Log("커져라");
         //_camera.m_Lens.FieldOfView += 10;
 
         Vector3 cameraDirection = this.transform.localRotation * Vector3.forward;
@@ -59,7 +58,6 @@ public class PlayerStickmanCamera : MonoBehaviour
 
     public void DecreaseDistanceCamera()
     {
-        Debug.Log("작아져라");
         //_camera.m_Lens.FieldOfView += 10;
 
         Vector3 cameraDirection = this.transform.localRotation * Vector3.forward;

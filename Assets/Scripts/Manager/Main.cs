@@ -39,6 +39,7 @@ public class Main : MonoBehaviour
     private readonly GameManager _game = new GameManager();
     private readonly SpawnManager _spawn = new();
     private readonly CinemachineManager _cinemachine = new();
+    private readonly PlayerManager _player = new PlayerManager();
 
 
     public static PoolManager Pool => Instance?._pool;
@@ -48,6 +49,7 @@ public class Main : MonoBehaviour
     public static GameManager Game => Instance?._game;
     public static SpawnManager Spawn => Instance?._spawn;
     public static CinemachineManager Cinemachine => Instance?._cinemachine;
+    public static PlayerManager Player => Instance?._player;    
 
 
 }

@@ -2,17 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager 
 {
-    // Start is called before the first frame update
-    void Start()
+    public StickmanData playerData = new StickmanData()
     {
-        
+        index = 0,
+        name = "Player",
+        initLevel = 30,
+        level = 0,
+
+        head_parts = null,
+        top_parts = null,
+        bottom_parts = null,
+
+        isPlayer = true
+    };
+
+
+
+    public StickmanData AddPlayerStickmanData()
+    {
+        var data = Main.Stickman.AddStickmanData(playerData.level, playerData.name);
+        Main.Stickman.SetStickmanParts(data, playerData.head_parts);
+        Main.Stickman.SetStickmanParts(data, playerData.top_parts);
+        Main.Stickman.SetStickmanParts(data, playerData.bottom_parts);
+
+        return playerData;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ModifyPlayerLv(int lv)
     {
-        
+        playerData.level = lv;
     }
 }

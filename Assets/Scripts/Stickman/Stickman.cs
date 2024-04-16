@@ -8,6 +8,7 @@ public class Stickman : MonoBehaviour
     private StickmanController _controller;
     private Animator _animator;
     private bool _isRunParameter;
+    public bool _isEated;
     private int _rootCode;
     
     [HideInInspector] public Rigidbody rb;
@@ -30,6 +31,7 @@ public class Stickman : MonoBehaviour
         _animator.enabled = true;
         rb = transform.GetComponent<Rigidbody>();
         _rootCode = transform.root.GetHashCode();
+        _isEated = false;
 
         body.GetComponent<SkinnedMeshRenderer>().material.color = _controller.GetColor();
 
@@ -49,10 +51,14 @@ public class Stickman : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Stickman"))
         {
             if (other.transform.root.GetHashCode() == _rootCode) return;
+            if (!other.TryGetComponent<Stickman>(out Stickman otherStickman)) return;
+            if (otherStickman._isEated) return;
             if (!other.transform.root.TryGetComponent<StickmanController>(out StickmanController otherController)) return;
             if (Time.timeScale < 1) return;
 
-            if(otherController.GetLevel() < _controller.GetLevel())
+
+            if(otherController == null || _controller == null) return;
+            else if (otherController?.GetLevel() < _controller?.GetLevel())
             {
                 _controller.MakeStickman(1);
             }
@@ -79,6 +85,8 @@ public class Stickman : MonoBehaviour
 
     public void Eated()
     {
+        if(_isEated) return;
+        _isEated = true;
         SetIdleAnimation();
         RemoveFromList();
         _controller.SetLevel(false);

@@ -65,10 +65,10 @@ public class GameSceneUI : UI_Scene
 
     //private void UpdateTopSnakesUI()
     //{
-    //    // 상위 4개의 뱀 데이터 가져오기
-    //    List<SnakeData> topSnakes = Main.Snake.GetTopSnakes(4);
+    //    상위 4개의 뱀 데이터 가져오기
+    //    List<StickmanData> topSnakes = Main.Stickman.GetTopSnakes(4);
 
-    //    // 가져온 데이터를 UI에 표시
+    //    가져온 데이터를 UI에 표시
     //    if (topSnakes.Count > 0)
     //    {
     //        Rank1Name.text = topSnakes[0].name;

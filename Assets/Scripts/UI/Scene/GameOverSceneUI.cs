@@ -16,7 +16,7 @@ public class GameOverSceneUI : UI_Scene
     {
         if (!base.Initialize()) return false;
 
-        Time.timeScale = 0f;
+        Time.timeScale = 0.001f;
 
         //resultLv.text = Main.Stickman.GetSnakeData(0).level.ToString();
 

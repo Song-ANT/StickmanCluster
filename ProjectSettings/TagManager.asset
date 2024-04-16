@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Head
   - Undefined
+  - Parts_Top
+  - Parts_Head
+  - Parts_Bottom
+  - Parts_Mask
+  - Parts_Onepiece
+  - rootBone
   layers:
   - Default
   - TransparentFX
@@ -16,7 +22,7 @@ TagManager:
   - Stickman
   - Food
   - Head
-  - 
+  - StickmanModel
   - 
   - 
   - 

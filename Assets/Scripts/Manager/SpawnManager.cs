@@ -9,12 +9,14 @@ public class SpawnManager
     public Dictionary<int, GameObject> stickman_Bottom_Parts = new Dictionary<int, GameObject>();
 
 
+    // 플레이어 소환 - 초기레벨 1일경우
     public void InitInstantiatePlayer(string initObject)
     {
         var player = Main.Resource.InstantiatePrefab(initObject);
         Main.Cinemachine.SetPlayerStickmanCamera(player.transform);
     }
 
+    // 플레이어 소환 - 초기레벨 initCount의 경우
     public void InitInstantiatePlayer(int initCount, string initObject)
     {
         var player = Main.Resource.InstantiatePrefab(initObject);
@@ -24,6 +26,8 @@ public class SpawnManager
         controller.MakeStickman(initCount - 1);
     }
 
+
+    // 보스 소환
     public void InitInstantiateBoss(string initObject)
     {
         var Boss = Main.Resource.InstantiatePrefab(initObject);
@@ -31,10 +35,11 @@ public class SpawnManager
         Boss.transform.position = new Vector3(0, 0, 30);
         Boss.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
 
-        StickmanController controller = Boss.GetComponent<StickmanController>();
-        controller.MakeStickman(Main.Game.BossLv - 1);
+        //StickmanController controller = Boss.GetComponent<StickmanController>();
+        //controller.MakeStickman(Main.Game.BossLv - 1);
     }
 
+    // 적 소환
     public void InitInstantiateEnemy(int initCount, string initObject)
     {
         for (int i = 0; i < initCount; i++)
@@ -46,6 +51,8 @@ public class SpawnManager
         }
     }
 
+
+    // 중립 스틱맨 소환
 
     public void InitInstantiateFood(int initCount, string initObject)
     {
@@ -64,6 +71,8 @@ public class SpawnManager
         }
     }
 
+
+    // 스틱맨 부분 파츠 리스트에 추가
     public void InitializeStickmanParts()
     {
         for (int i = 0; i < 9; i++)
@@ -74,6 +83,8 @@ public class SpawnManager
         }
     }
 
+
+    // 스틱맨 스킨 변경
     public void UpdateSkinnedMeshRenderer(Transform rootBone, GameObject targetSkinObject, bool includeInactive)
     {
         if (!targetSkinObject.TryGetComponent<SkinnedMeshRenderer>(out SkinnedMeshRenderer targetSkin) || rootBone == null)

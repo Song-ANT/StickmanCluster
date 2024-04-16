@@ -6,11 +6,13 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public abstract class StickmanController : MonoBehaviour
 {
-    protected int _level;
+    private StickmanData _data;
+    protected int _level ;
 
     private float _distance = 0.5f;
     private float _radius = 1f;
@@ -29,12 +31,45 @@ public abstract class StickmanController : MonoBehaviour
     {
         _isPlayer = gameObject.CompareTag("Player");
         SetColor();
-        MakeStickman(1);
-        _level = 1;
+
+        InitializeData();
+        ConfigureInitialStickman();
     }
 
+    private void InitializeData()
+    {
+        if (_isPlayer)
+        {
+            _data = Main.Player.AddPlayerStickmanData();
+        }
+        else
+        {
+            _level = GetInitialLevel();
+            _data = Main.Stickman.AddStickmanData(_level);
+        }
 
-    
+    }
+
+    private int GetInitialLevel()
+    {
+        if (IsBossScene())
+        {
+            return Main.Game.BossLv;
+        }
+        return _level == 0 ? 1 : _level;
+    }
+
+    private bool IsBossScene()
+    {
+        return SceneManager.GetActiveScene().name.Equals(Define.SceneName.Boss);
+    }
+
+    private void ConfigureInitialStickman()
+    {
+        int initialLevel = IsBossScene() ? _data.level : _data.initLevel;
+        MakeStickman(initialLevel);
+        _level = initialLevel;
+    }
     #endregion
 
 
@@ -52,6 +87,7 @@ public abstract class StickmanController : MonoBehaviour
             SetLevel(true);
         }
 
+        
         FormatStickman();
     }
 
@@ -90,7 +126,16 @@ public abstract class StickmanController : MonoBehaviour
     {
         _level += isPositive ? 1 : -1;
 
-        if (_isPlayer && _level % 10 == 0) Main.Cinemachine.CameraDistanceStart(isPositive);
+        if (_isPlayer) 
+        {
+            Main.Player.ModifyPlayerLv(_level);
+            if(_level % 10 == 0)  Main.Cinemachine.CameraDistanceStart(isPositive);
+        }
+        else
+        {
+            _data.level = _level;
+            Main.Stickman.ModifyStickmanData(_data);
+        }
     }
 
 

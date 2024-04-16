@@ -7,9 +7,9 @@ using UnityEngine;
 public class StickmanData
 {
     public int index;
-    public Transform rootStickman;
     public string name;
-    public int count;
+    public int level;
+    public int initLevel = 1;
 
     public GameObject head_parts = null;
     public GameObject top_parts = null;
@@ -25,29 +25,58 @@ public class StickmanManager
     private int index = 0;
    
 
-    public List<StickmanData> _stickmanData = new List<StickmanData>();
+    public List<StickmanData> stickmanData = new List<StickmanData>();
 
     
-    public StickmanData AddStickmanData(Transform stickman, int count, string name = null)
+    public void ClearStickmanData()
+    {
+        index = 0;
+        stickmanData.Clear();
+    }
+
+    public StickmanData AddStickmanData(int count, string name = null)
     {
         StickmanData data = new StickmanData();
         data.index = index++;
 
-        data.rootStickman = stickman;
-        data.count = count;
+        data.level = count;
+        data.initLevel = count;
         data.name = name != null ? name : index.ToString();
 
+        stickmanData.Add(data);
         return data;
     }
 
+    public void ModifyStickmanData(StickmanData newData)
+    {
+        var prevData = stickmanData[newData.index];
+        prevData.name = newData.name;
+        prevData.level = newData.level;
+    }
+
+    public StickmanData GetStickmanData(int index)
+    {
+        return stickmanData[index];
+    }
 
     public void SetStickmanParts(StickmanData data, GameObject part)
     {
-        if (part.layer != LayerMask.NameToLayer("StickmanModel")) return;
+        if (part == null || part.layer != LayerMask.NameToLayer("StickmanModel")) return;
         
         if(part.CompareTag("Parts_Head")) data.head_parts = part;
         else if(part.CompareTag("Parts_Top")) data.top_parts = part;
         else if(part.CompareTag("Parts_Bottom")) data.bottom_parts = part;
+    }
+
+
+    public List<StickmanData> GetTopSnakes(int count)
+    {
+        // snakeDatas 리스트를 level이 높은 순으로 정렬
+        List<StickmanData> sortedSnakes = new List<StickmanData>(stickmanData);
+        sortedSnakes.Sort((x, y) => y.level.CompareTo(x.level)); // 내림차순 정렬
+
+        // 상위 count개의 SnakeData를 반환
+        return sortedSnakes.GetRange(0, Mathf.Min(count, sortedSnakes.Count));
     }
 }
 

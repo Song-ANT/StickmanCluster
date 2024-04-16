@@ -9,6 +9,8 @@ public class GameScene : BaseScene
         if (!base.Initialize()) return false;
 
         Main.Pool.Clear();
+        Main.Stickman.ClearStickmanData();
+
 
         // ¹Ù´Ú »ý¼º
         Main.Resource.InstantiatePrefab(Define.PrefabName.Floor);
