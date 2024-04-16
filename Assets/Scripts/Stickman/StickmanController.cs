@@ -13,6 +13,7 @@ public abstract class StickmanController : MonoBehaviour
 {
     private StickmanData _data;
     protected int _level ;
+    private LvSubItemUI _lvUI;
 
     private float _distance = 0.5f;
     private float _radius = 1f;
@@ -30,6 +31,7 @@ public abstract class StickmanController : MonoBehaviour
     protected virtual void Awake()
     {
         _isPlayer = gameObject.CompareTag("Player");
+        _lvUI = Main.UI.SetSubItemUI<LvSubItemUI>(this.transform);
         SetColor();
 
         InitializeData();
@@ -133,6 +135,7 @@ public abstract class StickmanController : MonoBehaviour
         }
         _data.level = _level;
         Main.Stickman.ModifyStickmanData(_data);
+        _lvUI.SetLvText(_level);
         
     }
 

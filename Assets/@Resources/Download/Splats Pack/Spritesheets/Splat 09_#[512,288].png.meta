@@ -1,0 +1,2960 @@
+fileFormatVersion: 2
+guid: c9dc7da734f435542a46c116fef5a54e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_0
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3456
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2941abb2a7cf0dc43ad4aafc676e43fa
+      internalID: -1465595103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_1
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3456
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc9541a89545fc4fae82600ea15b347
+      internalID: -1233403976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_2
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3456
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecde9cf858fa995408b50fc650ab87ae
+      internalID: 304248046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3519afd16160f734d9b3641313c0a06f
+      internalID: -342319807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216d25a24c322a141940619697bb5ef0
+      internalID: 438687458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4427ef4d94e5942a7bf97ea565f52f
+      internalID: 495693612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc96c6c042be3cb42bb89938f421ae24
+      internalID: -1236928522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0a85530cdaa0841a1b39345f8152c6
+      internalID: 846360886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_8
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387e84ef8ffb7b547b9adc5e556dd5ce
+      internalID: 1321603137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_9
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0991684d99c5fb439ae63a4e7ebbe35
+      internalID: 995020591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_10
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d3d461a28838748a15e6dd45c6e2e5
+      internalID: 266944850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_11
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1391c8ced684b4c95384727639eae7
+      internalID: -825905181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_12
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9820a5d1714c24ea0871a1d3df5246
+      internalID: -1826916110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_13
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3168
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9410424e652bc694881894842cd4d454
+      internalID: -1624689023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaade09ef971e8c42b33075e9c38f0ad
+      internalID: 1931030674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a6c6374e492744eb7fe0548202a6db
+      internalID: 830668082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abebecf253dc3464d91fc41f1cd15d95
+      internalID: -881986033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_17
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94de5353f8d21048849893af58fb455
+      internalID: -1375131811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_18
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516ee6a8075fda34dbb9a8ae732f3027
+      internalID: -1152430553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_19
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed87b5515a627e344855e5f05827c4f1
+      internalID: -1904850782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_20
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986ba3a4e2dfe1f4c96944ac0562eddf
+      internalID: 1426464631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_21
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3905357a28a91444699c15c88add90cd
+      internalID: -1032023917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_22
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0916d099333ad4a449565c1711fe4090
+      internalID: 34327910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_23
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a83eece2d56bb40b4b78e52d6dd42a
+      internalID: -875961125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_24
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2880
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127ba6411ef405c459c1963aeea573a1
+      internalID: 394609243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ffa404f9bc2294fa4d9b34eb3c6a97
+      internalID: -1931684647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d179082f37ee72b4a98a0d819993e34b
+      internalID: -962045151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_27
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd93d5802e08b0847a8867986ef67940
+      internalID: -1805039877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01df73c95bcd8e445b87968f1d26f6d2
+      internalID: -1543308587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc9556cda9d207418e67ba61f38ffec
+      internalID: -1104286106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_30
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20a598c70ff466468ecbb869e1b0a1d
+      internalID: 1289476406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_31
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d16c96ff4658549b0e20f64a15ffb1
+      internalID: 167858974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_32
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50467fdb632b6b4fa2a0770a9e52340
+      internalID: 1865968859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_33
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105119c528c323c4084f7e24bd975256
+      internalID: -635991364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_34
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071ccb5394e42c748974c32356691d06
+      internalID: -455179140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_35
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2592
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5eb7c49b2f9b448a6a1f9132875339
+      internalID: -2089073444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b68874070698a41999113936453852
+      internalID: 639607448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_37
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173f18b028572f344b972b76c505e138
+      internalID: 1231933191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_38
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09508ee64787f2a4dbf8b9e749f56e0e
+      internalID: -14967487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_39
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ce67a5e851f8b418f7315016843dfa
+      internalID: 1898631401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_40
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b566bf4cdf28c44b8980532d2d996c0
+      internalID: -2131518306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_41
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c648c1b7570b9644abaf857de1985eb
+      internalID: -183660653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_42
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed302ff526b10ec4e8b24aa8c4087e45
+      internalID: -1898157090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_43
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4e7259638189943a308f6d3b5627fd
+      internalID: 1400680215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_44
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9f41877ab22f24cac1113965233785
+      internalID: 1239800243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_45
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7d54c13750cd74e955b3ef46766e03
+      internalID: 1965874799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_46
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2304
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e35e5483f75f24fa96fdc7cd513f5d
+      internalID: -2092061086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bc5ae1069dfbd4f9381ac922d0d38b
+      internalID: 1740774171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_48
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fcac7d2bcf839408c9520f912e3055
+      internalID: -1545544002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_49
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22c7a2414af143458e39db2ddb88576
+      internalID: -769877877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_50
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50886804fddff949b47452e12534f29
+      internalID: 1826307382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_51
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed2cdfe8e52ff64fa1611a4683ba760
+      internalID: -951158349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_52
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a2861dbd481aa46b87f8b177726577
+      internalID: -1825823438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_53
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10fb42f794d9294082af26faaba31f6
+      internalID: -1857988845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_54
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140544ad548621244a468c14ce25a092
+      internalID: 1814582576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_55
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655d0f8f133b7e645a41644e3904925e
+      internalID: -1833724835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_56
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef625ba69879114f8e1a146509de5c6
+      internalID: -403119988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_57
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2016
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d27507b35bebc478f8482eaea2ba88
+      internalID: 189021710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60a17cd6b6d1434fbe6ce573c66cf56
+      internalID: 1767230687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_59
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf103d03be2ad5b44a8d2b63df72a9e7
+      internalID: 688972078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_60
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a535a7a0440fe4a9d75909d1b4893a
+      internalID: -1537970346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_61
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac433db1f72dd5845ac8a8974590cc5a
+      internalID: 101461848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_62
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17930fa9cb738bf479d5ffc08e094dbe
+      internalID: 1335593018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_63
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5393913fc8a04746a3c30c573900925
+      internalID: 1324869914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_64
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3721af3878d3c0740a445d1a1df1279c
+      internalID: 1692690081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_65
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f86f0807045f9d4684af499e83c2b8e
+      internalID: 1217739523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_66
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3920c5d46f592499076e4e2f8466b7
+      internalID: 1016949283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_67
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655e8fe74c3033c4eb1c2993a9c78027
+      internalID: 25174502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_68
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1728
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfa1f3ea64accf4abaf6c08e4f8a0f7
+      internalID: -187236976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9f07712ed227d4fa999cfc868f1e8d
+      internalID: -743513454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_70
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b055c6ef28cf314895c7df2753988a3
+      internalID: -1892038453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_71
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d43b8592f55c7049ba56a50c950af70
+      internalID: 2039627982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_72
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcfc548af632b94285c823273755d8e
+      internalID: 1484190519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_73
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12678f4677229c479f0817fd4fbce0c
+      internalID: -1819137293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_74
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5b5ffd4279eb045bb3b95a0c9b9c2c
+      internalID: -656823700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_75
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e84fe9f36106bc488e5a4e63817f583
+      internalID: 169329060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_76
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef07bfc989b64a4ebd8bb3daf2e0d22
+      internalID: 156607381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_77
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b049a698dff1bcc45b9acc2f73511210
+      internalID: -489288124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_78
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffce605b0768d047b6ea3b74a2e1ace
+      internalID: 1793802705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_79
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1440
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd33cc563fe35e54eaf4f54445f0e01e
+      internalID: -1812080088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046bc69116770ce45b236c73f53d0bfa
+      internalID: -167517721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_81
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f601acc24ffd2a64a8d19e98a8a0a7cf
+      internalID: 1277909863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_82
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d29d430d6844a4cad1acdcd0f7e7c3
+      internalID: -41347232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_83
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f37040e9600af4cb9f37b06f53f11c
+      internalID: -286230719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_84
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59a9f05768dadf41b816c54b2508993
+      internalID: 1700246861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_85
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8048fdd847b2dca419c027ae91fe428a
+      internalID: 492489024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_86
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e4aebbe5ee23c4b8005ddf37cd773e
+      internalID: -430782410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_87
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b626fcde39f1aa14781ad8fc966bac49
+      internalID: -497446490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_88
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723f302f6b1c61045bdefdc26c488e78
+      internalID: -817392534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_89
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c092f0d97c3de6a4a9edf182d1ebd51b
+      internalID: 690917212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_90
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1152
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4d84edc6bc6ba4daf6195149db5e62
+      internalID: 28683394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8233581e18f120b41991ed1c59032331
+      internalID: 800330753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_92
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e425ade82461d45a01d3dd2338db53
+      internalID: -1497332118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_93
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe371021e514f604e9cc028f2cca2141
+      internalID: 1348299865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_94
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5377bafefe48dc4abfb39b02f10a3be
+      internalID: 1980149983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_95
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca14eb837a022847a7cb4c8f02d3d73
+      internalID: -1112953001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_96
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab2f8f8968522d4fbdccfe883d2c812
+      internalID: 511118894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_97
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5447385c8ddaba645a66c700edd6d76f
+      internalID: 1176273022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_98
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95230d0c64e640044b34af44a30ea05d
+      internalID: -829853043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_99
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b36cc81d9f337419cdd7b42d515026
+      internalID: -1167134193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_100
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a18ddc611a37c4b9788406c9acc611
+      internalID: -859494820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_101
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 864
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f446d0df7a26224f889a24db081febd
+      internalID: -616331282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90a435c1dc315043b536c6a388b6f48
+      internalID: 620179394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_103
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fc40b091d44b44facc61ff646cb95e
+      internalID: -1999899198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_104
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57900f0191b4db144b54770d605d7401
+      internalID: -1554743094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_105
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dff03bfbacaa4f43ae0261a0075f890
+      internalID: -1238196345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_106
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755c9b9450066c446a4de29b47187e6d
+      internalID: -835311228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_107
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4c5b98068cee44ebc004bdf34baea6
+      internalID: 1555694026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_108
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aebd76480aaa2d43b4effa6a47b43ca
+      internalID: 2128121139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_109
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d63945e4d24b764586ab47cbceb2e3d
+      internalID: -777512166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_110
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7955428a60d1e54dba90c5a334f74c4
+      internalID: 1915976875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_111
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc674d318c54204b861f5a58bfd96e1
+      internalID: -1267945213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_112
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 576
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936faaf58bdadeb46b3af0140ef9bd2f
+      internalID: -268383581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_113
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b6f7c7b20c57d4a8fa86c1d2e06c47
+      internalID: 762477128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_114
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc25efbac9c821458aef3323642423e
+      internalID: 237861545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_115
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6587bd9243b414dbc66c243d7099db
+      internalID: 1105427055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_116
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1efc0c82ee1ef4b92903b78c3911d0
+      internalID: 352865510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_117
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b0ee1ad4b0c04478a821efb244f7ab
+      internalID: 694520448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_118
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ced8ad6b3682c4099551600ac72009
+      internalID: -1580803208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_119
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8c8cbfce716574b91052391e9c6b64
+      internalID: 1925358034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_120
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc50e5115ddda04cbf71639f3db7d5f
+      internalID: -35992552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_121
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd6ad0eac2d10749bdf9ed8ab43309c
+      internalID: 647843184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_122
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47040ed7e70ded3419eb93cb7f880294
+      internalID: 200048144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_123
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 288
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04afb0b6c1f5204f94d38daaef413ce
+      internalID: -816548948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee536dd97a4e7a54d9adcbf90795f0a8
+      internalID: 277271568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_125
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a8a496fc5806e499b6bfbb17a3434f
+      internalID: -1481739341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_126
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de66bf9b782dcb4478487239089110b3
+      internalID: 1659088509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_127
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a712c4656ca3d384e807facda1a3dab2
+      internalID: 1854318328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Splat 09_#[512,288]_128
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c9f9dd493ce8b49a20bbf3cd291f0b
+      internalID: 1657838404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Splat 09_#[512,288]_53: -1857988845
+      Splat 09_#[512,288]_7: 846360886
+      Splat 09_#[512,288]_65: 1217739523
+      Splat 09_#[512,288]_100: -859494820
+      Splat 09_#[512,288]_62: 1335593018
+      Splat 09_#[512,288]_29: -1104286106
+      Splat 09_#[512,288]_88: -817392534
+      Splat 09_#[512,288]_63: 1324869914
+      Splat 09_#[512,288]_74: -656823700
+      Splat 09_#[512,288]_50: 1826307382
+      Splat 09_#[512,288]_58: 1767230687
+      Splat 09_#[512,288]_123: -816548948
+      Splat 09_#[512,288]_18: -1152430553
+      Splat 09_#[512,288]_116: 352865510
+      Splat 09_#[512,288]_59: 688972078
+      Splat 09_#[512,288]_10: 266944850
+      Splat 09_#[512,288]_87: -497446490
+      Splat 09_#[512,288]_90: 28683394
+      Splat 09_#[512,288]_23: -875961125
+      Splat 09_#[512,288]_8: 1321603137
+      Splat 09_#[512,288]_82: -41347232
+      Splat 09_#[512,288]_45: 1965874799
+      Splat 09_#[512,288]_47: 1740774171
+      Splat 09_#[512,288]_97: 1176273022
+      Splat 09_#[512,288]_60: -1537970346
+      Splat 09_#[512,288]_12: -1826916110
+      Splat 09_#[512,288]_93: 1348299865
+      Splat 09_#[512,288]_128: 1657838404
+      Splat 09_#[512,288]_38: -14967487
+      Splat 09_#[512,288]_22: 34327910
+      Splat 09_#[512,288]_26: -962045151
+      Splat 09_#[512,288]_52: -1825823438
+      Splat 09_#[512,288]_57: 189021710
+      Splat 09_#[512,288]_101: -616331282
+      Splat 09_#[512,288]_126: 1659088509
+      Splat 09_#[512,288]_114: 237861545
+      Splat 09_#[512,288]_30: 1289476406
+      Splat 09_#[512,288]_92: -1497332118
+      Splat 09_#[512,288]_67: 25174502
+      Splat 09_#[512,288]_4: 438687458
+      Splat 09_#[512,288]_15: 830668082
+      Splat 09_#[512,288]_73: -1819137293
+      Splat 09_#[512,288]_95: -1112953001
+      Splat 09_#[512,288]_49: -769877877
+      Splat 09_#[512,288]_102: 620179394
+      Splat 09_#[512,288]_42: -1898157090
+      Splat 09_#[512,288]_106: -835311228
+      Splat 09_#[512,288]_125: -1481739341
+      Splat 09_#[512,288]_55: -1833724835
+      Splat 09_#[512,288]_66: 1016949283
+      Splat 09_#[512,288]_83: -286230719
+      Splat 09_#[512,288]_61: 101461848
+      Splat 09_#[512,288]_89: 690917212
+      Splat 09_#[512,288]_98: -829853043
+      Splat 09_#[512,288]_20: 1426464631
+      Splat 09_#[512,288]_43: 1400680215
+      Splat 09_#[512,288]_108: 2128121139
+      Splat 09_#[512,288]_113: 762477128
+      Splat 09_#[512,288]_103: -1999899198
+      Splat 09_#[512,288]_2: 304248046
+      Splat 09_#[512,288]_120: -35992552
+      Splat 09_#[512,288]_48: -1545544002
+      Splat 09_#[512,288]_33: -635991364
+      Splat 09_#[512,288]_124: 277271568
+      Splat 09_#[512,288]_19: -1904850782
+      Splat 09_#[512,288]_85: 492489024
+      Splat 09_#[512,288]_115: 1105427055
+      Splat 09_#[512,288]_3: -342319807
+      Splat 09_#[512,288]_14: 1931030674
+      Splat 09_#[512,288]_94: 1980149983
+      Splat 09_#[512,288]_0: -1465595103
+      Splat 09_#[512,288]_24: 394609243
+      Splat 09_#[512,288]_80: -167517721
+      Splat 09_#[512,288]_112: -268383581
+      Splat 09_#[512,288]_35: -2089073444
+      Splat 09_#[512,288]_44: 1239800243
+      Splat 09_#[512,288]_70: -1892038453
+      Splat 09_#[512,288]_31: 167858974
+      Splat 09_#[512,288]_36: 639607448
+      Splat 09_#[512,288]_76: 156607381
+      Splat 09_#[512,288]_46: -2092061086
+      Splat 09_#[512,288]_51: -951158349
+      Splat 09_#[512,288]_86: -430782410
+      Splat 09_#[512,288]_78: 1793802705
+      Splat 09_#[512,288]_13: -1624689023
+      Splat 09_#[512,288]_17: -1375131811
+      Splat 09_#[512,288]_81: 1277909863
+      Splat 09_#[512,288]_75: 169329060
+      Splat 09_#[512,288]_1: -1233403976
+      Splat 09_#[512,288]_16: -881986033
+      Splat 09_#[512,288]_107: 1555694026
+      Splat 09_#[512,288]_117: 694520448
+      Splat 09_#[512,288]_37: 1231933191
+      Splat 09_#[512,288]_119: 1925358034
+      Splat 09_#[512,288]_21: -1032023917
+      Splat 09_#[512,288]_39: 1898631401
+      Splat 09_#[512,288]_111: -1267945213
+      Splat 09_#[512,288]_121: 647843184
+      Splat 09_#[512,288]_122: 200048144
+      Splat 09_#[512,288]_9: 995020591
+      Splat 09_#[512,288]_77: -489288124
+      Splat 09_#[512,288]_27: -1805039877
+      Splat 09_#[512,288]_41: -183660653
+      Splat 09_#[512,288]_68: -187236976
+      Splat 09_#[512,288]_25: -1931684647
+      Splat 09_#[512,288]_34: -455179140
+      Splat 09_#[512,288]_64: 1692690081
+      Splat 09_#[512,288]_79: -1812080088
+      Splat 09_#[512,288]_99: -1167134193
+      Splat 09_#[512,288]_56: -403119988
+      Splat 09_#[512,288]_110: 1915976875
+      Splat 09_#[512,288]_69: -743513454
+      Splat 09_#[512,288]_72: 1484190519
+      Splat 09_#[512,288]_84: 1700246861
+      Splat 09_#[512,288]_104: -1554743094
+      Splat 09_#[512,288]_6: -1236928522
+      Splat 09_#[512,288]_32: 1865968859
+      Splat 09_#[512,288]_54: 1814582576
+      Splat 09_#[512,288]_5: 495693612
+      Splat 09_#[512,288]_109: -777512166
+      Splat 09_#[512,288]_91: 800330753
+      Splat 09_#[512,288]_71: 2039627982
+      Splat 09_#[512,288]_40: -2131518306
+      Splat 09_#[512,288]_118: -1580803208
+      Splat 09_#[512,288]_105: -1238196345
+      Splat 09_#[512,288]_11: -825905181
+      Splat 09_#[512,288]_28: -1543308587
+      Splat 09_#[512,288]_127: 1854318328
+      Splat 09_#[512,288]_96: 511118894
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,6 +12,7 @@ TagManager:
   - Parts_Mask
   - Parts_Onepiece
   - rootBone
+  - Enemy
   layers:
   - Default
   - TransparentFX
