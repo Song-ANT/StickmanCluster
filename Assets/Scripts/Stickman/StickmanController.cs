@@ -131,11 +131,9 @@ public abstract class StickmanController : MonoBehaviour
             Main.Player.ModifyPlayerLv(_level);
             if(_level % 10 == 0)  Main.Cinemachine.CameraDistanceStart(isPositive);
         }
-        else
-        {
-            _data.level = _level;
-            Main.Stickman.ModifyStickmanData(_data);
-        }
+        _data.level = _level;
+        Main.Stickman.ModifyStickmanData(_data);
+        
     }
 
 

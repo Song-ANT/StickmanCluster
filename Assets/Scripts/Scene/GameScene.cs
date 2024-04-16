@@ -22,7 +22,7 @@ public class GameScene : BaseScene
         Main.Spawn.InitInstantiatePlayer(Define.PrefabName.StickmanPlayer);
 
         // 利 积己
-        Main.Spawn.InitInstantiateEnemy(50, Define.PrefabName.StickmanEnemy);
+        Main.Spawn.InitInstantiateEnemy(10, Define.PrefabName.StickmanEnemy);
 
         // 澜侥 积己
         Main.Spawn.InitInstantiateFood(100, Define.PrefabName.Food);

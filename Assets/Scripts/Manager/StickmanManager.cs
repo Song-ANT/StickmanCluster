@@ -69,14 +69,27 @@ public class StickmanManager
     }
 
 
-    public List<StickmanData> GetTopSnakes(int count)
+    public List<StickmanData> GetTopStickman(int count)
     {
         // snakeDatas 리스트를 level이 높은 순으로 정렬
-        List<StickmanData> sortedSnakes = new List<StickmanData>(stickmanData);
-        sortedSnakes.Sort((x, y) => y.level.CompareTo(x.level)); // 내림차순 정렬
+        List<StickmanData> sortedStickman = new List<StickmanData>(stickmanData);
+        Debug.Log("Before--------------------------");
+        foreach (StickmanData data in sortedStickman)
+        {
+            Debug.Log(data.name + " : " + data.level);
+        }
+        Debug.Log("Before--------------------------");
+        sortedStickman.Sort((x, y) => y.level.CompareTo(x.level)); // 내림차순 정렬
+
+        Debug.Log("After---------------------------");
+        foreach(StickmanData data in sortedStickman)
+        {
+            Debug.Log(data.name + " : " + data.level);
+        }
+        Debug.Log("After---------------------------");
 
         // 상위 count개의 SnakeData를 반환
-        return sortedSnakes.GetRange(0, Mathf.Min(count, sortedSnakes.Count));
+        return sortedStickman.GetRange(0, Mathf.Min(count, sortedStickman.Count));
     }
 }
 

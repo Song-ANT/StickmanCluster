@@ -34,7 +34,7 @@ public class GameSceneUI : UI_Scene
 
         _currentTime = Time.time;
         _startTime = Define.StartTime;
-        //BossLv.text = Main.Game.BossLv.ToString();
+        BossLv.text = Main.Game.BossLv.ToString();
         _isGameOver = false;
 
         return true;
@@ -59,35 +59,35 @@ public class GameSceneUI : UI_Scene
         string seconds = ((int)(timeLeft % 60)).ToString("D2");
         Timer.text = minutes + ":" + seconds;
 
-        //UpdateTopSnakesUI();
+        UpdateTopSnakesUI();
     }
 
 
-    //private void UpdateTopSnakesUI()
-    //{
-    //    상위 4개의 뱀 데이터 가져오기
-    //    List<StickmanData> topSnakes = Main.Stickman.GetTopSnakes(4);
+    private void UpdateTopSnakesUI()
+    {
+        // 상위 4개의 뱀 데이터 가져오기
+        List<StickmanData> topStickman = Main.Stickman.GetTopStickman(4);
 
-    //    가져온 데이터를 UI에 표시
-    //    if (topSnakes.Count > 0)
-    //    {
-    //        Rank1Name.text = topSnakes[0].name;
-    //        Rank1Lv.text = topSnakes[0].level.ToString();
-    //    }
-    //    if (topSnakes.Count > 1)
-    //    {
-    //        Rank2Name.text = topSnakes[1].name;
-    //        Rank2Lv.text = topSnakes[1].level.ToString();
-    //    }
-    //    if (topSnakes.Count > 2)
-    //    {
-    //        Rank3Name.text = topSnakes[2].name;
-    //        Rank3Lv.text = topSnakes[2].level.ToString();
-    //    }
-    //    if (topSnakes.Count > 3)
-    //    {
-    //        Rank4Name.text = topSnakes[3].name;
-    //        Rank4Lv.text = topSnakes[3].level.ToString();
-    //    }
-    //}
+        // 가져온 데이터를 UI에 표시
+        if (topStickman.Count > 0)
+        {
+            Rank1Name.text = topStickman[0].name;
+            Rank1Lv.text = topStickman[0].level.ToString();
+        }
+        if (topStickman.Count > 1)
+        {
+            Rank2Name.text = topStickman[1].name;
+            Rank2Lv.text = topStickman[1].level.ToString();
+        }
+        if (topStickman.Count > 2)
+        {
+            Rank3Name.text = topStickman[2].name;
+            Rank3Lv.text = topStickman[2].level.ToString();
+        }
+        if (topStickman.Count > 3)
+        {
+            Rank4Name.text = topStickman[3].name;
+            Rank4Lv.text = topStickman[3].level.ToString();
+        }
+    }
 }
