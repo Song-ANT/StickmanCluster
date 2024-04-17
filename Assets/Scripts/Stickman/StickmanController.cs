@@ -13,6 +13,7 @@ public abstract class StickmanController : MonoBehaviour
 {
     private StickmanData _data;
     protected int _level ;
+    private int _initLevel;
     private LvSubItemUI _lvUI;
 
     private float _distance = 0.5f;
@@ -46,8 +47,8 @@ public abstract class StickmanController : MonoBehaviour
         }
         else
         {
-            _level = GetInitialLevel();
-            _data = Main.Stickman.AddStickmanData(_level);
+            _initLevel = GetInitialLevel();
+            _data = Main.Stickman.AddStickmanData(_initLevel);
         }
 
     }
@@ -58,7 +59,7 @@ public abstract class StickmanController : MonoBehaviour
         {
             return Main.Game.BossLv;
         }
-        return _level == 0 ? 1 : _level;
+        return _initLevel == 0 ? 1 : _initLevel;
     }
 
     private bool IsBossScene()
@@ -171,6 +172,13 @@ public abstract class StickmanController : MonoBehaviour
             Main.Pool.Clear();
             Main.UI.SetSceneUI<GameOverSceneUI>();
         }
+
+        if (gameObject.CompareTag("Boss"))
+        {
+            Main.Pool.Clear();
+            Main.UI.SetSceneUI<GameOverSceneUI>();
+        }
+
         Destroy(gameObject);
         
     }

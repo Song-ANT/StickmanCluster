@@ -8,7 +8,7 @@ public class PlayerManager
     {
         index = 0,
         name = "Player",
-        initLevel = 30,
+        initLevel = 1,
         level = 0,
 
         head_parts = null,

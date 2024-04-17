@@ -23,7 +23,7 @@ public class BossScene : BaseScene
         Main.Spawn.InitInstantiatePlayer(Define.PrefabName.StickmanPlayer);
 
         // Àû »ý¼º
-        Main.Spawn.InitInstantiateBoss(Define.PrefabName.StickmanEnemy);
+        Main.Spawn.InitInstantiateBoss(Define.PrefabName.StickmanBoss);
 
 
 

@@ -18,6 +18,7 @@ public class Define
         public static string Stickman = "Stickman";
         public static string StickmanPlayer = "StickmanPlayer";
         public static string StickmanEnemy = "StickmanEnemy";
+        public static string StickmanBoss = "StickmanBoss";
         public static string Joystick = "JoyStickPanel";
         public static string Food = "Stickman_Food";
         public static string StickmanMaterial = "Skin_Color";
