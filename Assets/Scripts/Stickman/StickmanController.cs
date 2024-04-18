@@ -176,7 +176,18 @@ public abstract class StickmanController : MonoBehaviour
 
             if (_stickmanChilds.Count == 0) AllStickmanDie();
             else _stickmanChilds[0].SetStickmanColor(Color.white);
+
+            InstantiateSplatEffect();
         }
+    }
+
+    private void InstantiateSplatEffect()
+    {
+        Vector3 splatPos = transform.position + new Vector3(Random.Range(0f, 2f), 0.1f, Random.Range(0f, 2f));
+        Quaternion splatRot = Quaternion.Euler(new Vector3(90, 0, 0));
+
+        var splat = Main.Resource.InstantiatePrefab("Splat_1", splatPos, splatRot, true);
+        splat.GetComponent<Splat>().SetInit(_color);
     }
 
     private void AllStickmanDie()

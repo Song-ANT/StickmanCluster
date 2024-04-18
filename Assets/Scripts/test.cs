@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
+using Color = UnityEngine.Color;
 
 public class test : MonoBehaviour
 {
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        Debug.Log(other.name);
-        Main.Pool.Push(other.gameObject, true);
+        this.gameObject.GetComponent<SpriteRenderer>().material.color = Color.white;
     }
 
-    
+
 }
