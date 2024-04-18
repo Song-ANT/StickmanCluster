@@ -18,6 +18,7 @@ public class PlayerManager
         isPlayer = true
     };
 
+    public Color playerColor;
 
 
     public StickmanData AddPlayerStickmanData()
@@ -33,5 +34,10 @@ public class PlayerManager
     public void ModifyPlayerLv(int lv)
     {
         playerData.level = lv;
+    }
+
+    public void SetPlayerColor(Color color)
+    {
+        playerColor = color;
     }
 }

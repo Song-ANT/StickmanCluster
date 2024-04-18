@@ -33,7 +33,8 @@ public abstract class StickmanController : MonoBehaviour
     {
         _isPlayer = gameObject.CompareTag("Player");
         _lvUI = Main.UI.SetSubItemUI<LvSubItemUI>(this.transform);
-        SetColor();
+        _color = SetColor();
+        if (_isPlayer) Main.Player.SetPlayerColor(_color);
 
         InitializeData();
         ConfigureInitialStickman();
@@ -142,16 +143,28 @@ public abstract class StickmanController : MonoBehaviour
 
 
 
-    public void SetColor()
+    public Color SetColor()
     {
+        if (IsBossScene() && _isPlayer) return Main.Player.playerColor;
+
         float colorX = Random.Range(0, 1f);
         float colory = Random.Range(0, 1f);
         float colorz = Random.Range(0, 1f);
-        _color = _isPlayer ? Color.blue : new Color(colorX, colory, colorz);
-        
+        //_color = _isPlayer ? Color.blue : new Color(colorX, colory, colorz);
+        return new Color(colorX, colory, colorz);
     }
 
     public Color GetColor() => _color;
+
+    public Color GetColor(Stickman stickman)
+    {
+        if (_stickmanChilds.Count == 0 || _stickmanChilds[0] == stickman) return Color.white;
+        else
+        {
+            if (_isPlayer) return Main.Player.playerColor;
+            else return _color;
+        }
+    }
 
 
     public void RemoveStickman(GameObject stickmanObject, Stickman stickman)
@@ -160,8 +173,9 @@ public abstract class StickmanController : MonoBehaviour
         {
             _stickmans.Remove(stickmanObject);
             _stickmanChilds.Remove(stickman);
-            
+
             if (_stickmanChilds.Count == 0) AllStickmanDie();
+            else _stickmanChilds[0].SetStickmanColor(Color.white);
         }
     }
 

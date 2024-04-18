@@ -33,7 +33,8 @@ public class Stickman : MonoBehaviour
         _rootCode = transform.root.GetHashCode();
         _isEated = false;
 
-        body.GetComponent<SkinnedMeshRenderer>().material.color = _controller.GetColor();
+        //body.GetComponent<SkinnedMeshRenderer>().material.color = _controller.GetColor();
+        body.GetComponent<SkinnedMeshRenderer>().material.color = _controller.GetColor(this);
 
     }
 
@@ -100,6 +101,11 @@ public class Stickman : MonoBehaviour
     {
         // StickmanController를 통해 리스트에서 이 인스턴스를 제거
         _controller?.RemoveStickman(this.gameObject, this);
+    }
+
+    public void SetStickmanColor(Color color)
+    {
+        body.GetComponent<SkinnedMeshRenderer>().material.color = color;
     }
 
 }
