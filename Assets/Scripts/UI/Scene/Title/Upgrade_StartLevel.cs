@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartLevelUpgrade : MonoBehaviour, IUpgrade
+public class Upgrade_StartLevel : MonoBehaviour, IUpgrade
 {
     private string[] _kmb = new string[4] {"", "K", "M", "B" };
     private int _initLevel;

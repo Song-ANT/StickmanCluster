@@ -10,8 +10,8 @@ public class TitleSceneUI : UI_Scene
 {
     public Button startBtn;
     public Toggle soundBtn;
-    public StartLevelUpgrade startLevel_Btn;
-    public Button speedUp_Btn;
+    public Upgrade_StartLevel startLevel_Btn;
+    public Upgrade_SpeedUp speedUp_Btn;
     public Button foodLevel_Btn;
 
     public Sprite sound_O_Image;
@@ -47,6 +47,7 @@ public class TitleSceneUI : UI_Scene
         startBtn.onClick.AddListener(GameStart);
         soundBtn.onValueChanged.AddListener(SoundClicked);
         startLevel_Btn.OnButtenClicked();
+        speedUp_Btn.OnButtenClicked();
     }
 
     private void GameStart()

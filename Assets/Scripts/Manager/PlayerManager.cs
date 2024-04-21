@@ -21,12 +21,15 @@ public class PlayerManager
 
     public Color playerColor;
     private int _playerGold = 100;
+    private float _playerMoveSpeed = 5f;
 
     public int PlayerGold => _playerGold;
+    public float PlayerMoveSpeed => _playerMoveSpeed;
 
     public event Action OnGoldChangeEvent;
 
 
+    #region AddStickman
     public StickmanData AddPlayerStickmanData()
     {
         var data = Main.Stickman.AddStickmanData(playerData.level, playerData.initLevel, playerData.name);
@@ -37,7 +40,10 @@ public class PlayerManager
 
         return data;
     }
+    #endregion
 
+
+    #region Status
     public void ModifyPlayerLv(int lv)
     {
         playerData.level = lv;
@@ -53,6 +59,15 @@ public class PlayerManager
         playerColor = color;
     }
 
+    public void SetPlayerMoveSpeed(float speed)
+    {
+        _playerMoveSpeed = speed;
+    }
+    #endregion
+
+
+
+    #region Gold
     public void GoldPlus(int increase)
     {
         _playerGold += increase;
@@ -67,4 +82,5 @@ public class PlayerManager
         OnGoldChangeEvent?.Invoke();
         return true;
     }
+    #endregion
 }

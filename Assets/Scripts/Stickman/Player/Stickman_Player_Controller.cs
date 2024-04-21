@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 public class Stickman_Player_Controller : StickmanController
 {
     
-    private float _moveSpeed = 5f;
-    
+    private float _moveSpeed ;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _moveSpeed = Main.Player.PlayerMoveSpeed;
+    }
+
 
     private void FixedUpdate()
     {
