@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,20 +24,28 @@ public class PlayerManager
 
     public int PlayerGold => _playerGold;
 
+    public event Action OnGoldChangeEvent;
+
 
     public StickmanData AddPlayerStickmanData()
     {
-        var data = Main.Stickman.AddStickmanData(playerData.level, playerData.name);
+        var data = Main.Stickman.AddStickmanData(playerData.level, playerData.initLevel, playerData.name);
         Main.Stickman.SetStickmanParts(data, playerData.head_parts);
         Main.Stickman.SetStickmanParts(data, playerData.top_parts);
         Main.Stickman.SetStickmanParts(data, playerData.bottom_parts);
 
-        return playerData;
+
+        return data;
     }
 
     public void ModifyPlayerLv(int lv)
     {
         playerData.level = lv;
+    }
+
+    public void ModifyPlayerInitLv(int lv)
+    {
+        playerData.initLevel = lv;
     }
 
     public void SetPlayerColor(Color color)
@@ -47,6 +56,7 @@ public class PlayerManager
     public void GoldPlus(int increase)
     {
         _playerGold += increase;
+        OnGoldChangeEvent?.Invoke();
     }
 
     public bool GoldMinus(int decrease)
@@ -54,6 +64,7 @@ public class PlayerManager
         if(_playerGold - decrease < 0) return false;
 
         _playerGold -= decrease;
+        OnGoldChangeEvent?.Invoke();
         return true;
     }
 }

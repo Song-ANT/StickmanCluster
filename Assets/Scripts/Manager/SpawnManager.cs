@@ -14,6 +14,13 @@ public class SpawnManager
     {
         var player = Main.Resource.InstantiatePrefab(initObject);
         Main.Cinemachine.SetPlayerStickmanCamera(player.transform);
+
+        var initCamera = Main.Player.playerData.initLevel / 10;
+        for (int i = 0; i < initCamera; i++)
+        {
+            Debug.Log(i);
+            Main.Cinemachine.CameraDistanceStart(true);
+        }
     }
 
     // 플레이어 소환 - 초기레벨 initCount의 경우

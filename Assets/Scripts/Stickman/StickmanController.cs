@@ -49,7 +49,7 @@ public abstract class StickmanController : MonoBehaviour
         else
         {
             _initLevel = GetInitialLevel();
-            _data = Main.Stickman.AddStickmanData(_initLevel);
+            _data = Main.Stickman.AddStickmanData(_initLevel, _initLevel);
         }
 
     }

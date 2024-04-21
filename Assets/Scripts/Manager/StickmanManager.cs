@@ -34,13 +34,13 @@ public class StickmanManager
         stickmanData.Clear();
     }
 
-    public StickmanData AddStickmanData(int count, string name = null)
+    public StickmanData AddStickmanData(int count, int initCount, string name = null)
     {
         StickmanData data = new StickmanData();
         data.index = index++;
 
         data.level = count;
-        data.initLevel = count;
+        data.initLevel = initCount;
         data.name = name != null ? name : index.ToString();
 
         stickmanData.Add(data);
