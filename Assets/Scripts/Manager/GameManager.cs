@@ -5,9 +5,18 @@ using UnityEngine;
 public class GameManager 
 {
     public int BossLv = 50;
+    private int _clearGold = 0;
+
+    public int ClearGold => _clearGold;
 
     public void BossClear()
     {
         BossLv += 20;
+    }
+
+    public void SetClearGold(int clearGold)
+    {
+        _clearGold = clearGold;
+        Main.Player.GoldPlus(clearGold);
     }
 }

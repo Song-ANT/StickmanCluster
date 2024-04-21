@@ -74,10 +74,11 @@ public class StickmanManager
         // snakeDatas 리스트를 level이 높은 순으로 정렬
         List<StickmanData> sortedStickman = new List<StickmanData>(stickmanData);
         sortedStickman.Sort((x, y) => y.level.CompareTo(x.level)); // 내림차순 정렬
-
+        
 
         // 상위 count개의 SnakeData를 반환
         return sortedStickman.GetRange(0, Mathf.Min(count, sortedStickman.Count));
     }
+
 }
 

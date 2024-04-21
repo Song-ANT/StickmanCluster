@@ -31,7 +31,7 @@ public abstract class StickmanController : MonoBehaviour
     #region Init
     protected virtual void Awake()
     {
-        _isPlayer = gameObject.CompareTag("Player");
+        _isPlayer = gameObject.CompareTag(Define.TagName.Player);
         _lvUI = Main.UI.SetSubItemUI<LvSubItemUI>(this.transform);
         _color = SetColor();
         if (_isPlayer) Main.Player.SetPlayerColor(_color);
@@ -183,10 +183,11 @@ public abstract class StickmanController : MonoBehaviour
 
     private void InstantiateSplatEffect()
     {
-        Vector3 splatPos = transform.position + new Vector3(Random.Range(0f, 2f), 0.1f, Random.Range(0f, 2f));
+        Vector3 splatPos = transform.position + new Vector3(Random.Range(-3f, 3f), 0.1f, Random.Range(-3f, 3f));
         Quaternion splatRot = Quaternion.Euler(new Vector3(90, 0, 0));
 
-        var splat = Main.Resource.InstantiatePrefab("Splat_1", splatPos, splatRot, true);
+        string splatName = Define.PrefabName.SplatEffect + Random.Range(1, 3).ToString();
+        var splat = Main.Resource.InstantiatePrefab(splatName, splatPos, splatRot, true);
         splat.GetComponent<Splat>().SetInit(_color);
     }
 
@@ -194,18 +195,43 @@ public abstract class StickmanController : MonoBehaviour
     {
         if (_isPlayer)
         {
+            int clearGold = SetClearGold();
+            Debug.Log(clearGold + "클리어골드");
             Main.Pool.Clear();
-            Main.UI.SetSceneUI<GameOverSceneUI>();
+            var gameOverUI = Main.UI.SetSceneUI<GameOverSceneUI>();
+            //gameOverUI.SetClearGoldText(clearGold);
+            Main.Game.SetClearGold(clearGold);
+        }
+        else if (gameObject.CompareTag(Define.TagName.Boss))
+        {
+            int clearGold = SetClearGold();
+            Debug.Log(clearGold + "클리어골드");
+            Main.Pool.Clear();
+            var bossClearUI = Main.UI.SetSceneUI<GameOverSceneUI>();
+            clearGold += (Main.Game.BossLv * 10);
+            Debug.Log(clearGold + "보스클리어골드");
+            Main.Game.BossClear();
+            Main.Game.SetClearGold(clearGold);
         }
 
-        if (gameObject.CompareTag("Boss"))
-        {
-            Main.Pool.Clear();
-            Main.UI.SetSceneUI<GameOverSceneUI>();
-        }
 
         Destroy(gameObject);
         
+    }
+
+    private int SetClearGold()
+    {
+        int clearGold = _level;
+        int rank = 10;
+
+        var ranking = Main.Stickman.GetTopStickman(10);
+        foreach ( var item in ranking )
+        {
+            if (item.index == _data.index) { clearGold += rank; Debug.Log("rank : " + rank); }
+            rank--;
+        }
+
+        return clearGold * 10;
     }
 
 }

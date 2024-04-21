@@ -24,14 +24,19 @@ public class Define
         public static string Food = "Food_Burger";
         public static string StickmanMaterial = "Skin_Color";
         public static string PlayerCamera = "PlayerCamera";
+        public static string SplatEffect = "Splat_";
     }
 
+    public struct TagName
+    {
+        public static string Player = "Player";
+        public static string Head = "Head";
+        public static string Enemy = "Enemy";
+        public static string Boss = "Boss";
+
+    }
+
+    
     public static int StartTime = 15;
-
    
-
-
-
-
-
 }

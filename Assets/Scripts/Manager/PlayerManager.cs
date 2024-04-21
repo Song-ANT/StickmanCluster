@@ -19,6 +19,9 @@ public class PlayerManager
     };
 
     public Color playerColor;
+    private int _playerGold = 100;
+
+    public int PlayerGold => _playerGold;
 
 
     public StickmanData AddPlayerStickmanData()
@@ -39,5 +42,18 @@ public class PlayerManager
     public void SetPlayerColor(Color color)
     {
         playerColor = color;
+    }
+
+    public void GoldPlus(int increase)
+    {
+        _playerGold += increase;
+    }
+
+    public bool GoldMinus(int decrease)
+    {
+        if(_playerGold - decrease < 0) return false;
+
+        _playerGold -= decrease;
+        return true;
     }
 }

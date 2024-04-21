@@ -10,8 +10,8 @@ public class TitleScene : BaseScene
     {
         if (!base.Initialize()) return false;
 
-        //Main.UI.SetSceneUI<TitleSceneUI>();
-        Main.UI.SetSceneUI<ScrollSceneUI>();
+        Main.UI.SetSceneUI<TitleSceneUI>();
+        //Main.UI.SetSceneUI<ScrollSceneUI>();
 
         
 

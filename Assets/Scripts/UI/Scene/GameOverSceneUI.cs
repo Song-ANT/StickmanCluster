@@ -11,6 +11,7 @@ public class GameOverSceneUI : UI_Scene
 
     public Button restartBtn;
     public Button mainmenuBtn;
+    public TextMeshProUGUI clearGoldText;
 
     public override bool Initialize()
     {
@@ -19,7 +20,7 @@ public class GameOverSceneUI : UI_Scene
         Time.timeScale = 0.001f;
 
         //resultLv.text = Main.Stickman.GetSnakeData(0).level.ToString();
-
+        SetClearGoldText();
 
         restartBtn.onClick.AddListener(RestartBtnClicked);
         mainmenuBtn.onClick.AddListener(MainmenuBtnClicked);
@@ -36,5 +37,11 @@ public class GameOverSceneUI : UI_Scene
     private void MainmenuBtnClicked()
     {
         SceneManager.LoadScene(Define.SceneName.Title);
+    }
+
+    public void SetClearGoldText()
+    {
+        //clearGoldText.text = clearGold.ToString();
+        clearGoldText.text = Main.Game.ClearGold.ToString();
     }
 }
