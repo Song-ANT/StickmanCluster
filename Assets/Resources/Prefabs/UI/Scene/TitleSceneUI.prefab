@@ -126,7 +126,7 @@ MonoBehaviour:
   soundBtn: {fileID: 1375996936866223014}
   startLevel_Btn: {fileID: 8551643079329802866}
   speedUp_Btn: {fileID: 3560081021885328979}
-  foodLevel_Btn: {fileID: 1275093747588555976}
+  foodLevel_Btn: {fileID: 9016275960801845882}
   sound_O_Image: {fileID: -213356348, guid: 156ec492e516ccb4099add479601d65e, type: 3}
   sound_X_Image: {fileID: 1897002124, guid: 156ec492e516ccb4099add479601d65e, type: 3}
   goldText: {fileID: 4066289562775758461}
@@ -1250,9 +1250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a335baab88bf95d488e382b64356d457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedUp_Btn: {fileID: 8011256371043715423}
-  speedUp_GoldText: {fileID: 681732035081129048}
-  speedUp_LevelText: {fileID: 6034396553394707122}
+  Btn: {fileID: 8011256371043715423}
+  GoldText: {fileID: 681732035081129048}
+  LevelText: {fileID: 6034396553394707122}
 --- !u!1 &4605386584770431848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,9 +2067,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79bbb5ae917bf94ebd0e1674b6ae421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLevel_Btn: {fileID: 3060761248095932424}
-  startLevel_GoldText: {fileID: 8656344505505403462}
-  startLevel_LevelText: {fileID: 7448527897919491681}
+  Btn: {fileID: 3060761248095932424}
+  GoldText: {fileID: 8656344505505403462}
+  LevelText: {fileID: 7448527897919491681}
 --- !u!1 &6743085369215035051
 GameObject:
   m_ObjectHideFlags: 0
@@ -2082,7 +2082,7 @@ GameObject:
   - component: {fileID: 5583202316067529878}
   - component: {fileID: 3277149749520456587}
   - component: {fileID: 1326740963328472243}
-  - component: {fileID: 1275093747588555976}
+  - component: {fileID: 9016275960801845882}
   m_Layer: 5
   m_Name: Upgrade_3
   m_TagString: Untagged
@@ -2196,7 +2196,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1275093747588555976
+--- !u!114 &9016275960801845882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2208,9 +2208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b93b0f928529a40be6d656579b4f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodLevel_Btn: {fileID: 1326740963328472243}
-  foodLevel_GoldText: {fileID: 3931048892618544777}
-  foodLevel_LevelText: {fileID: 6726625697480879368}
+  Btn: {fileID: 1326740963328472243}
+  GoldText: {fileID: 3931048892618544777}
+  LevelText: {fileID: 6726625697480879368}
 --- !u!1 &6807744357851383483
 GameObject:
   m_ObjectHideFlags: 0
