@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class TitleSceneUI : UI_Scene
 {
+    private string[] _kmb = new string[4] { "", "K", "M", "B" };
+
     public Button startBtn;
     public Toggle soundBtn;
     public Upgrade_Base startLevel_Btn;
@@ -65,12 +67,20 @@ public class TitleSceneUI : UI_Scene
 
     private void SetGoldText()
     {
-        goldText.text = Main.Player.PlayerGold.ToString();
+        goldText.text = GoldString();
     }
 
+    private string GoldString()
+    {
+        int i = 0;
+        float gold = Main.Player.PlayerGold;
 
-    #region Upgrade
+        while ((int)(gold / 1000) > 0)
+        {
+            i++;
+            gold /= 1000;
+        }
 
-
-    #endregion
+        return gold.ToString("f1") + _kmb[i];
+    }
 }

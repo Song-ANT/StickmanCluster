@@ -78,6 +78,6 @@ public abstract class Upgrade_Base : MonoBehaviour, IUpgrade
             unitPrice /= 1000;
         }
 
-        return unitPrice.ToString() + _kmb[i];
+        return unitPrice.ToString("f1") + _kmb[i];
     }
 }
