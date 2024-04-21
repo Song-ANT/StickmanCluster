@@ -22,10 +22,13 @@ public class PlayerManager
     public Color playerColor;
     private int _playerGold = 100;
     private float _playerMoveSpeed = 5f;
+    private int _playerFoodLevel = 1;
+
+
 
     public int PlayerGold => _playerGold;
     public float PlayerMoveSpeed => _playerMoveSpeed;
-
+    public int PlayerFoodLevel => _playerFoodLevel;
     public event Action OnGoldChangeEvent;
 
 
@@ -62,6 +65,11 @@ public class PlayerManager
     public void SetPlayerMoveSpeed(float speed)
     {
         _playerMoveSpeed = speed;
+    }
+
+    public void SetPlayerFoodLevel(int levle)
+    {
+        _playerFoodLevel = levle;
     }
     #endregion
 

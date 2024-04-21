@@ -45,7 +45,7 @@ public class Stickman : MonoBehaviour
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Food"))
         {
-            _controller.MakeStickman(1);
+            _controller.MakeStickman(EatFoodMakeStickmanCount());
             other.GetComponent<Stickman_Food>().Eated();
         }
 
@@ -106,6 +106,12 @@ public class Stickman : MonoBehaviour
     public void SetStickmanColor(Color color)
     {
         body.GetComponent<SkinnedMeshRenderer>().material.color = color;
+    }
+
+    public int EatFoodMakeStickmanCount()
+    {
+        if (_controller._isPlayer) return Main.Player.PlayerFoodLevel;
+        else return 1;
     }
 
 }

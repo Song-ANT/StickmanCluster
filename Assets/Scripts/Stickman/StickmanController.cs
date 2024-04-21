@@ -18,7 +18,7 @@ public abstract class StickmanController : MonoBehaviour
 
     private float _distance = 0.5f;
     private float _radius = 1f;
-    private bool _isPlayer;
+    public bool _isPlayer;
 
 
     private List<GameObject> _stickmans = new List<GameObject>();

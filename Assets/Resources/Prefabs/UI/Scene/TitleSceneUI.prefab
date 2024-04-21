@@ -126,7 +126,7 @@ MonoBehaviour:
   soundBtn: {fileID: 1375996936866223014}
   startLevel_Btn: {fileID: 8551643079329802866}
   speedUp_Btn: {fileID: 3560081021885328979}
-  foodLevel_Btn: {fileID: 1326740963328472243}
+  foodLevel_Btn: {fileID: 1275093747588555976}
   sound_O_Image: {fileID: -213356348, guid: 156ec492e516ccb4099add479601d65e, type: 3}
   sound_X_Image: {fileID: 1897002124, guid: 156ec492e516ccb4099add479601d65e, type: 3}
   goldText: {fileID: 4066289562775758461}
@@ -2082,6 +2082,7 @@ GameObject:
   - component: {fileID: 5583202316067529878}
   - component: {fileID: 3277149749520456587}
   - component: {fileID: 1326740963328472243}
+  - component: {fileID: 1275093747588555976}
   m_Layer: 5
   m_Name: Upgrade_3
   m_TagString: Untagged
@@ -2195,6 +2196,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1275093747588555976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743085369215035051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b93b0f928529a40be6d656579b4f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodLevel_Btn: {fileID: 1326740963328472243}
+  foodLevel_GoldText: {fileID: 3931048892618544777}
+  foodLevel_LevelText: {fileID: 6726625697480879368}
 --- !u!1 &6807744357851383483
 GameObject:
   m_ObjectHideFlags: 0

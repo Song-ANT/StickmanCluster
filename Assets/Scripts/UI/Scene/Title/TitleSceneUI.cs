@@ -12,7 +12,7 @@ public class TitleSceneUI : UI_Scene
     public Toggle soundBtn;
     public Upgrade_StartLevel startLevel_Btn;
     public Upgrade_SpeedUp speedUp_Btn;
-    public Button foodLevel_Btn;
+    public Upgrade_FoodLevel foodLevel_Btn;
 
     public Sprite sound_O_Image;
     public Sprite sound_X_Image;
@@ -48,6 +48,7 @@ public class TitleSceneUI : UI_Scene
         soundBtn.onValueChanged.AddListener(SoundClicked);
         startLevel_Btn.OnButtenClicked();
         speedUp_Btn.OnButtenClicked();
+        foodLevel_Btn.OnButtenClicked();
     }
 
     private void GameStart()
