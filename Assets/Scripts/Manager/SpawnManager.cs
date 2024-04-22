@@ -60,23 +60,26 @@ public class SpawnManager
 
 
     // 중립 스틱맨 소환
-
-    public void InitInstantiateFood(int initCount, string initObject)
+    public void InitInstantiateFood(int initCount, string initObject = null, Transform parent = null)
     {
         for (int i = 0; i < initCount; i++)
         {
             float x = Random.Range(-50f, 50f);
-            float y = Random.Range(-50f, 50f);
+            float y = Random.Range(-180f, 180f);
+            float z = Random.Range(-50f, 50f);
 
-            Vector3 pos = new Vector3(x, 0, y);
-            Quaternion rot = Quaternion.identity;
+            Vector3 pos = new Vector3(x, 0, z);
+            Quaternion rot = Quaternion.Euler(new Vector3(0, y, 0));
 
-            GameObject food = Main.Resource.InstantiatePrefab(initObject, pos, rot, true);
+            string objectName = initObject == null ? Define.FoodPrefabName() : initObject;
+            GameObject food = Main.Resource.InstantiatePrefab(objectName, pos, rot, parent, true);
 
             food.transform.position = pos;
             food.transform.rotation = rot;
         }
     }
+
+    
 
 
     // 스틱맨 부분 파츠 리스트에 추가

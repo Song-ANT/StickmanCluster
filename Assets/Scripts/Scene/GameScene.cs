@@ -25,7 +25,8 @@ public class GameScene : BaseScene
         Main.Spawn.InitInstantiateEnemy(10, Define.PrefabName.StickmanEnemy);
 
         // 음식 생성
-        Main.Spawn.InitInstantiateFood(100, Define.PrefabName.Food);
+        var foodParent = Main.Resource.InstantiatePrefab("FoodParent");
+        Main.Spawn.InitInstantiateFood(100, null, foodParent.transform);
 
         // 게임 씬 UI 생성
         Main.UI.SetSceneUI<GameSceneUI>();

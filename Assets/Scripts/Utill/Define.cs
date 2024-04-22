@@ -36,7 +36,29 @@ public class Define
 
     }
 
-    
+
+    public static string FoodPrefabName()
+    {
+        int num = Random.Range(0, 5);
+
+        switch (num)
+        {
+            case 0:
+                return "Food_Tomato";
+            case 1:
+                return "Food_Banana";
+            case 2:
+                return "Food_Donut";
+            case 3:
+                return "Food_Fish";
+            case 4:
+                return "Food_Burger";
+        }
+
+        return null;
+    }
+
+
     public static int StartTime = 15;
    
 }

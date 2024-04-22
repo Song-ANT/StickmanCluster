@@ -81,7 +81,7 @@ public class ResourceManager
         return obj;
     }
 
-    public GameObject InstantiatePrefab(string key, Vector3 _position, Quaternion _rotate, bool pooling = false)
+    public GameObject InstantiatePrefab(string key, Vector3 _position, Quaternion _rotate, Transform parent = null, bool pooling = false)
     {
         GameObject prefab = Load<GameObject>(key);
 
@@ -96,6 +96,7 @@ public class ResourceManager
             GameObject temp = Main.Pool.Pop(prefab);
             temp.transform.position = _position;
             temp.transform.rotation = _rotate;
+            temp.transform.parent = parent;
 
             return temp; 
         }

@@ -20,7 +20,7 @@ public class PlayerManager
     };
 
     public Color playerColor;
-    private int _playerGold = 1234567;
+    private int _playerGold = 1000;
     private float _playerMoveSpeed = 5f;
     private int _playerFoodLevel = 1;
 

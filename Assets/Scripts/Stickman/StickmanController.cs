@@ -187,7 +187,7 @@ public abstract class StickmanController : MonoBehaviour
         Quaternion splatRot = Quaternion.Euler(new Vector3(90, 0, 0));
 
         string splatName = Define.PrefabName.SplatEffect + Random.Range(1, 3).ToString();
-        var splat = Main.Resource.InstantiatePrefab(splatName, splatPos, splatRot, true);
+        var splat = Main.Resource.InstantiatePrefab(splatName, splatPos, splatRot, null,true);
         splat.GetComponent<Splat>().SetInit(_color);
     }
 
