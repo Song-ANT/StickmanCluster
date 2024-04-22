@@ -280,6 +280,8 @@ MonoBehaviour:
   restartBtn: {fileID: 2948236735439398797}
   mainmenuBtn: {fileID: 3413378782486765511}
   clearGoldText: {fileID: 4347671720612128953}
+  rankingText: {fileID: 7811598204042083191}
+  levelText: {fileID: 3097786946390468229}
 --- !u!1 &1673983787156803287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,8 +1365,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: 0}
-  m_SizeDelta: {x: 80, y: 50}
+  m_AnchoredPosition: {x: 30, y: 0}
+  m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4205154589500748300
 CanvasRenderer:
@@ -1394,7 +1396,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 st
+  m_text: 00 st
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75f82a6d89461374481c2b8d3001a54c, type: 2}
   m_sharedMaterial: {fileID: 4507804387761645007, guid: 75f82a6d89461374481c2b8d3001a54c, type: 2}

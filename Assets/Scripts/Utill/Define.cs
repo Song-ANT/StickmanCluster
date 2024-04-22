@@ -58,6 +58,21 @@ public class Define
         return null;
     }
 
+    public static string RankingUnit(int rank)
+    {
+        switch(rank)
+        {
+            case 1:
+                return " st";
+            case 2:
+                return " nd";
+            case 3:
+                return " rd";
+            default:
+                return " th";
+        }
+    }
+
 
     public static int StartTime = 15;
    

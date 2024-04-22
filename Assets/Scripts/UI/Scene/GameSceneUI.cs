@@ -49,6 +49,7 @@ public class GameSceneUI : UI_Scene
             if (!_isGameOver)
             {
                 //Main.UI.SetSceneUI<GameOverSceneUI>();
+                Main.Player.SetGameRankLevel();
                 SceneManager.LoadScene(Define.SceneName.Boss);
                 _isGameOver = true;
             }

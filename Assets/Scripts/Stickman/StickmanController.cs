@@ -128,7 +128,8 @@ public abstract class StickmanController : MonoBehaviour
 
     public void SetLevel(bool isPositive)
     {
-        _level += isPositive ? 1 : -1;
+        //_level += isPositive ? 1 : -1;
+        _level += isPositive ? 1 : 0;
 
         if (_isPlayer) 
         {
@@ -196,20 +197,18 @@ public abstract class StickmanController : MonoBehaviour
         if (_isPlayer)
         {
             int clearGold = SetClearGold();
-            Debug.Log(clearGold + "클리어골드");
             Main.Pool.Clear();
             var gameOverUI = Main.UI.SetSceneUI<GameOverSceneUI>();
             //gameOverUI.SetClearGoldText(clearGold);
             Main.Game.SetClearGold(clearGold);
+            if (!IsBossScene()) Main.Player.SetGameRankLevel();
         }
         else if (gameObject.CompareTag(Define.TagName.Boss))
         {
             int clearGold = SetClearGold();
-            Debug.Log(clearGold + "클리어골드");
             Main.Pool.Clear();
             var bossClearUI = Main.UI.SetSceneUI<GameOverSceneUI>();
             clearGold += (Main.Game.BossLv * 10);
-            Debug.Log(clearGold + "보스클리어골드");
             Main.Game.BossClear();
             Main.Game.SetClearGold(clearGold);
         }

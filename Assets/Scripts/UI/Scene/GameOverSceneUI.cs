@@ -12,6 +12,8 @@ public class GameOverSceneUI : UI_Scene
     public Button restartBtn;
     public Button mainmenuBtn;
     public TextMeshProUGUI clearGoldText;
+    public TextMeshProUGUI rankingText;
+    public TextMeshProUGUI levelText;
 
     public override bool Initialize()
     {
@@ -21,6 +23,8 @@ public class GameOverSceneUI : UI_Scene
 
         //resultLv.text = Main.Stickman.GetSnakeData(0).level.ToString();
         SetClearGoldText();
+        SetRankinText();
+        SetLevelText();
 
         restartBtn.onClick.AddListener(RestartBtnClicked);
         mainmenuBtn.onClick.AddListener(MainmenuBtnClicked);
@@ -43,5 +47,21 @@ public class GameOverSceneUI : UI_Scene
     {
         //clearGoldText.text = clearGold.ToString();
         clearGoldText.text = Main.Game.ClearGold.ToString();
+    }
+
+    public void SetRankinText()
+    {
+        int rank = Main.Player.GameRank;
+        string unit = Define.RankingUnit(rank);
+
+        rankingText.text = rank + unit;
+    }
+
+    
+
+    public void SetLevelText()
+    {
+        int level = Main.Player.GameLevel;
+        levelText.text = level == 0 ? "Die" : level.ToString();
     }
 }

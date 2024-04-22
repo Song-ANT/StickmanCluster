@@ -23,12 +23,15 @@ public class PlayerManager
     private int _playerGold = 1000;
     private float _playerMoveSpeed = 5f;
     private int _playerFoodLevel = 1;
-
+    private int _gameRank;
+    private int _gameLevel;
 
 
     public int PlayerGold => _playerGold;
     public float PlayerMoveSpeed => _playerMoveSpeed;
     public int PlayerFoodLevel => _playerFoodLevel;
+    public int GameRank => _gameRank;
+    public int GameLevel => _gameLevel;
     public event Action OnGoldChangeEvent;
 
 
@@ -70,6 +73,18 @@ public class PlayerManager
     public void SetPlayerFoodLevel(int levle)
     {
         _playerFoodLevel = levle;
+    }
+
+    public void SetInitGameRankLevel()
+    {
+        _gameRank = 0;
+        _gameLevel = 0;
+    }
+
+    public void SetGameRankLevel()
+    {
+        _gameRank = Main.Stickman.GetRank(Main.Stickman.GetStickmanData(0));
+        _gameLevel = playerData.level;
     }
     #endregion
 
