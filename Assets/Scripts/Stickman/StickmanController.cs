@@ -187,8 +187,14 @@ public abstract class StickmanController : MonoBehaviour
         Vector3 splatPos = transform.position + new Vector3(Random.Range(-3f, 3f), 0.1f, Random.Range(-3f, 3f));
         Quaternion splatRot = Quaternion.Euler(new Vector3(90, 0, 0));
 
+        GameObject obj = GameObject.FindWithTag("SplatParent");
+        if (obj == null)
+        {
+            obj = new() { name = @"SplatParent", tag = "SplatParent" };
+        }
+
         string splatName = Define.PrefabName.SplatEffect + Random.Range(1, 3).ToString();
-        var splat = Main.Resource.InstantiatePrefab(splatName, splatPos, splatRot, null,true);
+        var splat = Main.Resource.InstantiatePrefab(splatName, splatPos, splatRot, obj.transform, true);
         splat.GetComponent<Splat>().SetInit(_color);
     }
 
