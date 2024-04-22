@@ -99,7 +99,7 @@ public class SpawnManager
     {
         if (!targetSkinObject.TryGetComponent<SkinnedMeshRenderer>(out SkinnedMeshRenderer targetSkin) || rootBone == null)
         {
-            Debug.Log("TargetSkin or RootBone is not set.");
+            //Debug.Log("TargetSkin or RootBone is not set.");
             return;
         }
 
@@ -116,10 +116,10 @@ public class SpawnManager
             }
             else
             {
-                Debug.Log("Bone " + targetSkin.bones[i].name + " not found!");
+                //Debug.Log("Bone " + targetSkin.bones[i].name + " not found!");
             }
         }
         targetSkin.bones = newBones;
-        Debug.Log("Skinned Mesh Renderer updated.");
+        //Debug.Log("Skinned Mesh Renderer updated.");
     }
 }

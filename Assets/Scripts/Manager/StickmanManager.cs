@@ -80,5 +80,13 @@ public class StickmanManager
         return sortedStickman.GetRange(0, Mathf.Min(count, sortedStickman.Count));
     }
 
+    public int GetRank(StickmanData data)
+    {
+        List<StickmanData> sortedStickman = new List<StickmanData>(stickmanData);
+        sortedStickman.Sort((x, y) => y.level.CompareTo(x.level)); // 내림차순 정렬
+
+        return sortedStickman.IndexOf(data) + 1;
+    }
+
 }
 
