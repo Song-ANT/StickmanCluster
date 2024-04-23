@@ -11,6 +11,7 @@ public class BaseScene : MonoBehaviour
         if (!Main.Resource.Loaded)
         {
             Main.Resource.ResourcesAssign();
+            Main.Save.DataLoad_Player();
             Main.Spawn.InitializeStickmanParts();
         }
 
@@ -23,6 +24,7 @@ public class BaseScene : MonoBehaviour
         if (initialized) return false;
 
         Time.timeScale = 1.0f;
+        
 
 
         initialized = true;

@@ -15,6 +15,7 @@ TagManager:
   - Enemy
   - Boss
   - FoodParent
+  - SplatParent
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,8 @@ public class GameScene : BaseScene
     {
         if (!base.Initialize()) return false;
 
+        Main.Save.Save();
+
         Main.Pool.Clear();
         Main.Stickman.ClearStickmanData();
 

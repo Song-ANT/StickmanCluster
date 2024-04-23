@@ -40,6 +40,7 @@ public abstract class Upgrade_Base : MonoBehaviour, IUpgrade
 
         SetUpgradeLevel();
         SetText();
+        Main.Save.Save();
     }
 
 

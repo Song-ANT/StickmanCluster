@@ -92,7 +92,7 @@ public abstract class StickmanController : MonoBehaviour
         }
 
         
-        FormatStickman();
+        FormatStickman(num);
     }
 
     public void FormatStickman()
@@ -111,12 +111,48 @@ public abstract class StickmanController : MonoBehaviour
             //var child = transform.GetChild(i);
             var child = _stickmans[i].transform;
 
-            if (Vector3.Distance(child.transform.position, transform.position + newPos) > _distance)
-            {
-                child.position = transform.position;
-            }
+            //if (Vector3.Distance(child.position, transform.position) > _distance * Mathf.Sqrt(i))
+            //{
+            //    child.position = transform.position;
+            //}
+
+            
 
             child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
+
+            //child.position = newPos;
+        }
+    }
+
+    public void FormatStickman(int num)
+    {
+
+        for (int i = 0; i < _stickmans.Count; i++)
+        {
+            _distance = Random.Range(0.5f, 0.6f);
+            _radius = Random.Range(0.9f, 1f);
+
+            var x = _distance * Mathf.Sqrt(i) * Mathf.Cos(i * _radius);
+            var y = _distance * Mathf.Sqrt(i) * Mathf.Sin(i * _radius);
+
+            var newPos = new Vector3(x, 0, y);
+
+            //var child = transform.GetChild(i);
+            var child = _stickmans[i].transform;
+
+            //if (Vector3.Distance(child.position, transform.position) > _distance * Mathf.Sqrt(i))
+            //{
+            //    child.position = transform.position;
+            //}
+
+            if(i >= _stickmans.Count - num)
+            {
+                child.position = transform.position;
+                child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
+            }
+
+
+            //child.position = newPos;
         }
     }
 
@@ -128,8 +164,8 @@ public abstract class StickmanController : MonoBehaviour
 
     public void SetLevel(bool isPositive)
     {
-        //_level += isPositive ? 1 : -1;
-        _level += isPositive ? 1 : 0;
+        _level += isPositive ? 1 : -1;
+        
 
         if (_isPlayer) 
         {

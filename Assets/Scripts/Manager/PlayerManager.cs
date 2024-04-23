@@ -50,6 +50,22 @@ public class PlayerManager
 
 
     #region Status
+    public void SetPlayerSaveData(PlayerSaveData save)
+    {
+        playerData.index = save.index;
+        playerData.name = save.name;
+        playerData.level = save.level;
+        playerData.initLevel = save.initLevel;
+
+        playerData.head_parts = save.head_parts;
+        playerData.top_parts = save.top_parts;
+        playerData.bottom_parts = save.bottom_parts;
+
+        _playerGold = save.playerGold;
+        _playerMoveSpeed = save.playerMoveSpeed;
+        _playerFoodLevel = save.playerFoodLevel;
+    }
+
     public void ModifyPlayerLv(int lv)
     {
         playerData.level = lv;

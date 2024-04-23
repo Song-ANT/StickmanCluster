@@ -34,6 +34,7 @@ public class Main : MonoBehaviour
 
     private readonly PoolManager _pool = new();
     private readonly ResourceManager _resource = new();
+    private readonly SaveLoadManager _save = new();
     private readonly UIManager _ui = new UIManager();
     private readonly StickmanManager _stickman = new();
     private readonly GameManager _game = new GameManager();
@@ -44,6 +45,7 @@ public class Main : MonoBehaviour
 
     public static PoolManager Pool => Instance?._pool;
     public static ResourceManager Resource => Instance?._resource;
+    public static SaveLoadManager Save => Instance?._save;
     public static UIManager UI => Instance?._ui;
     public static StickmanManager Stickman => Instance?._stickman;
     public static GameManager Game => Instance?._game;
