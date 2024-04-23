@@ -59,6 +59,7 @@ public class SaveLoadManager
     public void Save()
     {
         path = PlayerDataFilePath();
+        Debug.Log(path);
 
         SavePlayerdata();
         
