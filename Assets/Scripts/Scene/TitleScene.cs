@@ -15,7 +15,13 @@ public class TitleScene : BaseScene
 
         //Main.UI.SetSceneUI<ScrollSceneUI>();
 
-        
+        // 바닥 생성
+        Main.Resource.InstantiatePrefab(Define.PrefabName.Floor);
+
+        // 플레이어 생성
+        var stickman = Main.Resource.InstantiatePrefab(Define.PrefabName.Stickman);
+
+        Main.Cinemachine.SetPlayerStickmanCamera(stickman.transform);
 
 
         //CreatePrefabFromFBX(Main.Resource.Load<GameObject>("Stickman-Model"));

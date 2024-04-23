@@ -130,10 +130,6 @@ MonoBehaviour:
   sound_O_Image: {fileID: -213356348, guid: 156ec492e516ccb4099add479601d65e, type: 3}
   sound_X_Image: {fileID: 1897002124, guid: 156ec492e516ccb4099add479601d65e, type: 3}
   goldText: {fileID: 4066289562775758461}
-  speedUp_GoldText: {fileID: 681732035081129048}
-  speedUp_LevelText: {fileID: 6034396553394707122}
-  foodLevel_GoldText: {fileID: 3931048892618544777}
-  foodLevel_LevelText: {fileID: 6726625697480879368}
 --- !u!1 &1032026892007454194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,7 +1266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &558359057637620818
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1727,7 +1723,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5900134555475337617}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

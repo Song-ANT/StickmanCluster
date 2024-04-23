@@ -31,8 +31,8 @@ public class TitleSceneUI : UI_Scene
 
         SetGoldText();
 
-        Main.Resource.InstantiatePrefab("Stickman_Shop");
-        Main.Resource.InstantiatePrefab("TitleShopCamera");
+        //Main.Resource.InstantiatePrefab("Stickman_Shop");
+        //Main.Resource.InstantiatePrefab("TitleShopCamera");
 
         OnBtnListener();
 
