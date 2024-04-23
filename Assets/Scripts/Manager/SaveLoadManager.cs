@@ -53,7 +53,7 @@ public class SaveLoadManager
 
     private string PlayerDataFilePath()
     {
-        return Path.Combine(Application.dataPath + "/SaveData.json");
+        return Path.Combine(Application.persistentDataPath + "/SaveData.json");
 
     }
     public void Save()
