@@ -59,14 +59,14 @@ public class SaveLoadManager
     public void Save()
     {
         path = PlayerDataFilePath();
-        Debug.Log(path);
+        //Debug.Log(path);
 
         SavePlayerdata();
         
 
         string jsonData = JsonUtility.ToJson(data, true);
-        //System.IO.File.WriteAllText(path, Crypto.AESEncrypt(jsonData));
-        System.IO.File.WriteAllText(path, jsonData);
+        System.IO.File.WriteAllText(path, Crypto.AESEncrypt(jsonData));
+        //System.IO.File.WriteAllText(path, jsonData);
     }
 
     private void SavePlayerdata()
@@ -91,8 +91,8 @@ public class SaveLoadManager
     {
         path = PlayerDataFilePath();
         string jsonData = System.IO.File.ReadAllText(path);
-        //string ddd = Crypto.AESDecrypt(jsonData);
-        string ddd = jsonData;
+        string ddd = Crypto.AESDecrypt(jsonData);
+        //string ddd = jsonData;
 
 
         data = JsonUtility.FromJson<PlayerSaveData>(ddd);

@@ -18,7 +18,6 @@ public class SpawnManager
         var initCamera = Main.Player.playerData.initLevel / 10;
         for (int i = 0; i < initCamera; i++)
         {
-            Debug.Log(i);
             Main.Cinemachine.CameraDistanceStart(true);
         }
     }

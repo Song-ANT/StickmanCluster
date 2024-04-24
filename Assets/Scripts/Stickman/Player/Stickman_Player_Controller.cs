@@ -14,10 +14,15 @@ public class Stickman_Player_Controller : StickmanController
         _moveSpeed = Main.Player.PlayerMoveSpeed;
     }
 
+    private void Update()
+    {
+        MoveStickman();
+    }
+
 
     private void FixedUpdate()
     {
-        MoveStickman();
+        RotateStickman();
     }
 
     private void MoveStickman()
@@ -33,6 +38,14 @@ public class Stickman_Player_Controller : StickmanController
             0,
             Mathf.Lerp(transform.position.z, move.z, Time.deltaTime * _moveSpeed));
 
+        
+    }
+
+    private void RotateStickman()
+    {
+        var joyVec = new Vector3(JoyStick.Instance.joyVec.x, 0, JoyStick.Instance.joyVec.y);
+        bool isBossScene = SceneManager.GetActiveScene().name.Equals(Define.SceneName.Boss);
+
         for (int i = 0; i < _stickmanChilds.Count; i++)
         {
             if (isBossScene) { _stickmanChilds[i].SetRunAnimation(); continue; }
@@ -41,14 +54,13 @@ public class Stickman_Player_Controller : StickmanController
                 _stickmanChilds[i].rb.velocity = Vector3.zero;
                 Quaternion newRotation = Quaternion.LookRotation(joyVec);
                 _stickmanChilds[i].rb.MoveRotation(newRotation);
-                
+
                 _stickmanChilds[i].SetRunAnimation();
             }
             else _stickmanChilds[i].SetIdleAnimation();
 
         }
     }
-
 
     
 

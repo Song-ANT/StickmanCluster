@@ -268,7 +268,7 @@ public abstract class StickmanController : MonoBehaviour
         var ranking = Main.Stickman.GetTopStickman(10);
         foreach ( var item in ranking )
         {
-            if (item.index == _data.index) { clearGold += rank; Debug.Log("rank : " + rank); }
+            if (item.index == _data.index) clearGold += rank;
             rank--;
         }
 
