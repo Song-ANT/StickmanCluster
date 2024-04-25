@@ -20,8 +20,9 @@ public class PlayerManager
     };
 
     public Color playerColor;
-    private int _playerGold = 1000;
+    private int _playerGold = 0;
     private float _playerMoveSpeed = 5f;
+    private int _playerMoveLevel = 1;
     private int _playerFoodLevel = 1;
     private int _gameRank;
     private int _gameLevel;
@@ -29,6 +30,7 @@ public class PlayerManager
 
     public int PlayerGold => _playerGold;
     public float PlayerMoveSpeed => _playerMoveSpeed;
+    public int PlayerMoveLevel => _playerMoveLevel;
     public int PlayerFoodLevel => _playerFoodLevel;
     public int GameRank => _gameRank;
     public int GameLevel => _gameLevel;
@@ -86,9 +88,13 @@ public class PlayerManager
         _playerMoveSpeed = speed;
     }
 
-    public void SetPlayerFoodLevel(int levle)
+    public void SetPlayerMoveLevel(int level)
     {
-        _playerFoodLevel = levle;
+        _playerMoveLevel = level;
+    }
+    public void SetPlayerFoodLevel(int level)
+    {
+        _playerFoodLevel = level;
     }
 
     public void SetInitGameRankLevel()

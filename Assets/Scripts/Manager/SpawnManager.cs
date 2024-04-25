@@ -30,6 +30,12 @@ public class SpawnManager
 
         StickmanController controller = player.GetComponent<StickmanController>();
         controller.MakeStickman(initCount - 1);
+
+        var initCamera = Main.Player.playerData.initLevel / 10;
+        for (int i = 0; i < initCamera; i++)
+        {
+            Main.Cinemachine.CameraDistanceStart(true);
+        }
     }
 
 

@@ -22,4 +22,9 @@ public class Upgrade_FoodLevel : Upgrade_Base, IUpgrade
         Main.Player.SetPlayerFoodLevel(_initData);
     }
 
+    protected override void SetPrice()
+    {
+        _price = _upgrade_Level * 1000;
+    }
+
 }

@@ -7,9 +7,12 @@ using UnityEngine.UI;
 
 public class Upgrade_SpeedUp : Upgrade_Base, IUpgrade
 {
+    private float _speed;
+
     protected override void Start()
     {
-        _initData = (int)(Main.Player.PlayerMoveSpeed * 10);
+        _initData = Main.Player.PlayerMoveLevel;
+        _speed = Main.Player.PlayerMoveSpeed;
 
         base.Start();
     }
@@ -20,14 +23,11 @@ public class Upgrade_SpeedUp : Upgrade_Base, IUpgrade
         base.SetPlayerActionMethod();
 
         _initData += 1;
-        Main.Player.SetPlayerMoveSpeed(_initData / 10f);
+        Main.Player.SetPlayerMoveSpeed(_speed + 0.1f);
+        Main.Player.SetPlayerMoveLevel(_initData);
     }
 
 
 
-    protected override void SetUpgradeLevel()
-    {
-        _upgrade_Level = _initData - 49;
-    }
 
 }

@@ -63,9 +63,9 @@ public abstract class Upgrade_Base : MonoBehaviour, IUpgrade
         GoldText.text = PriceString();
     }
 
-    private void SetPrice()
+    protected virtual void SetPrice()
     {
-        _price = _upgrade_Level * 1;
+        _price = _upgrade_Level * 100;
     }
 
     private string PriceString()

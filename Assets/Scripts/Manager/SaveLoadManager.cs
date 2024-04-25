@@ -20,6 +20,7 @@ public class PlayerSaveData
 
     public int playerGold;
     public float playerMoveSpeed;
+    public int playerMoveLevel;
     public int playerFoodLevel;
 
     public int BossLevel;
@@ -82,6 +83,7 @@ public class SaveLoadManager
 
         data.playerGold = Main.Player.PlayerGold;
         data.playerMoveSpeed = Main.Player.PlayerMoveSpeed;
+        data.playerMoveLevel = Main.Player.PlayerMoveLevel;
         data.playerFoodLevel = Main.Player.PlayerFoodLevel;
 
         data.BossLevel = Main.Game.BossLv;
@@ -118,11 +120,12 @@ public class SaveLoadManager
         data.bottom_parts = null;
         data.head_parts = null;
 
-        data.playerGold = 1000;
+        data.playerGold = 0;
         data.playerMoveSpeed = 5f;
+        data.playerMoveLevel = 1;
         data.playerFoodLevel = 1;
 
-        data.BossLevel = 50;
+        data.BossLevel = 200;
     }
 
 
