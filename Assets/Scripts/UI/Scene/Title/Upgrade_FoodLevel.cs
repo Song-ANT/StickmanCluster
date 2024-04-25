@@ -8,7 +8,7 @@ public class Upgrade_FoodLevel : Upgrade_Base, IUpgrade
 {
     protected override void Start()
     {
-        _initData = Main.Player.PlayerFoodLevel;
+        _initData = Main.Player.playerData.foodLevel;
 
         base.Start();
     }

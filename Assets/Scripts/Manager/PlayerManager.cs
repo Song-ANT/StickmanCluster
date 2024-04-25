@@ -11,6 +11,7 @@ public class PlayerManager
         name = "Player",
         initLevel = 1,
         level = 0,
+        foodLevel = 1,
 
         head_parts = null,
         top_parts = null,
@@ -23,7 +24,6 @@ public class PlayerManager
     private int _playerGold = 0;
     private float _playerMoveSpeed = 5f;
     private int _playerMoveLevel = 1;
-    private int _playerFoodLevel = 1;
     private int _gameRank;
     private int _gameLevel;
 
@@ -31,7 +31,6 @@ public class PlayerManager
     public int PlayerGold => _playerGold;
     public float PlayerMoveSpeed => _playerMoveSpeed;
     public int PlayerMoveLevel => _playerMoveLevel;
-    public int PlayerFoodLevel => _playerFoodLevel;
     public int GameRank => _gameRank;
     public int GameLevel => _gameLevel;
     public event Action OnGoldChangeEvent;
@@ -40,7 +39,7 @@ public class PlayerManager
     #region AddStickman
     public StickmanData AddPlayerStickmanData()
     {
-        var data = Main.Stickman.AddStickmanData(playerData.level, playerData.initLevel, playerData.name);
+        var data = Main.Stickman.AddStickmanData(playerData.level, playerData.initLevel, playerData.foodLevel, playerData.name);
         Main.Stickman.SetStickmanParts(data, playerData.head_parts);
         Main.Stickman.SetStickmanParts(data, playerData.top_parts);
         Main.Stickman.SetStickmanParts(data, playerData.bottom_parts);
@@ -58,6 +57,7 @@ public class PlayerManager
         playerData.name = save.name;
         playerData.level = save.level;
         playerData.initLevel = save.initLevel;
+        playerData.foodLevel = save.playerFoodLevel;
 
         playerData.head_parts = save.head_parts;
         playerData.top_parts = save.top_parts;
@@ -65,7 +65,6 @@ public class PlayerManager
 
         _playerGold = save.playerGold;
         _playerMoveSpeed = save.playerMoveSpeed;
-        _playerFoodLevel = save.playerFoodLevel;
     }
 
     public void ModifyPlayerLv(int lv)
@@ -94,7 +93,7 @@ public class PlayerManager
     }
     public void SetPlayerFoodLevel(int level)
     {
-        _playerFoodLevel = level;
+        playerData.foodLevel = level;
     }
 
     public void SetInitGameRankLevel()

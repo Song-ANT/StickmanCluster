@@ -111,8 +111,9 @@ public class Stickman : MonoBehaviour
 
     public int EatFoodMakeStickmanCount()
     {
-        if (_controller._isPlayer) return Main.Player.PlayerFoodLevel;
-        else return 1;
+        //if (_controller._isPlayer) return Main.Player.playerData.foodLevel;
+        //else return 1;
+        return _controller.FoodLevel;
     }
 
 }

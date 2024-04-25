@@ -14,6 +14,7 @@ public abstract class StickmanController : MonoBehaviour
     private StickmanData _data;
     protected int _level ;
     private int _initLevel;
+    private int _foodLevel;
     private LvSubItemUI _lvUI;
 
     private float _distance = 0.5f;
@@ -26,6 +27,8 @@ public abstract class StickmanController : MonoBehaviour
 
 
     private Color _color;
+
+    public int FoodLevel => _foodLevel;
 
 
     #region Init
@@ -45,11 +48,13 @@ public abstract class StickmanController : MonoBehaviour
         if (_isPlayer)
         {
             _data = Main.Player.AddPlayerStickmanData();
+            _foodLevel = _data.foodLevel;
         }
         else
         {
             _initLevel = GetInitialLevel();
-            _data = Main.Stickman.AddStickmanData(_initLevel, _initLevel);
+            _foodLevel = GetFoodLevel();
+            _data = Main.Stickman.AddStickmanData(_initLevel, _initLevel, _foodLevel);
         }
 
     }
@@ -66,6 +71,14 @@ public abstract class StickmanController : MonoBehaviour
     private bool IsBossScene()
     {
         return SceneManager.GetActiveScene().name.Equals(Define.SceneName.Boss);
+    }
+
+    private int GetFoodLevel()
+    {
+        int level = Main.Player.playerData.foodLevel;
+        int rand = Random.Range(-3, 4);
+
+        return (level + rand) > 1 ? level + rand : 1;
     }
 
     private void ConfigureInitialStickman()

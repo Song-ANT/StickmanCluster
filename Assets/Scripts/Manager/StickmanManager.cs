@@ -10,10 +10,12 @@ public class StickmanData
     public string name;
     public int level;
     public int initLevel = 1;
+    public int foodLevel;
 
     public GameObject head_parts = null;
     public GameObject top_parts = null;
     public GameObject bottom_parts = null;
+
 
     public bool isPlayer;
 
@@ -34,13 +36,14 @@ public class StickmanManager
         stickmanData.Clear();
     }
 
-    public StickmanData AddStickmanData(int count, int initCount, string name = null)
+    public StickmanData AddStickmanData(int count, int initCount, int foodLevel, string name = null)
     {
         StickmanData data = new StickmanData();
         data.index = index++;
 
         data.level = count;
         data.initLevel = initCount;
+        data.foodLevel = foodLevel;
         data.name = name != null ? name : index.ToString();
 
         stickmanData.Add(data);

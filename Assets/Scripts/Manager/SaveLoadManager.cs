@@ -76,6 +76,7 @@ public class SaveLoadManager
         data.name = Main.Player.playerData.name;
         data.level = Main.Player.playerData.level;
         data.initLevel = Main.Player.playerData.initLevel;
+        data.playerFoodLevel = Main.Player.playerData.foodLevel;
 
         data.top_parts = Main.Player.playerData.top_parts;
         data.bottom_parts = Main.Player.playerData.bottom_parts;
@@ -84,7 +85,6 @@ public class SaveLoadManager
         data.playerGold = Main.Player.PlayerGold;
         data.playerMoveSpeed = Main.Player.PlayerMoveSpeed;
         data.playerMoveLevel = Main.Player.PlayerMoveLevel;
-        data.playerFoodLevel = Main.Player.PlayerFoodLevel;
 
         data.BossLevel = Main.Game.BossLv;
     }
