@@ -24,7 +24,7 @@ public class GameScene : BaseScene
         Main.Spawn.InitInstantiatePlayer(Define.PrefabName.StickmanPlayer);
 
         // 利 积己
-        Main.Spawn.InitInstantiateEnemy(50, Define.PrefabName.StickmanEnemy);
+        Main.Spawn.InitInstantiateEnemy(30, Define.PrefabName.StickmanEnemy);
 
         // 澜侥 积己
         var foodParent = Main.Resource.InstantiatePrefab("FoodParent");

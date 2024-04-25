@@ -100,7 +100,7 @@ public class ResourceManager
             return temp; 
         }
 
-        GameObject obj = GameObject.Instantiate(prefab, _position, _rotate);
+        GameObject obj = GameObject.Instantiate(prefab, _position, _rotate, parent);
         obj.name = prefab.name;
         return obj;
     }

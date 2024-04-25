@@ -267,6 +267,13 @@ public abstract class StickmanController : MonoBehaviour
             Main.Game.BossClear();
             Main.Game.SetClearGold(clearGold);
         }
+        else
+        {
+            int rand = Random.Range(1, 10);
+            int count = Main.Stickman.stickmanData[0].level - rand;
+            count = count > 1 ? count : 1;
+            Main.Spawn.InitInstantiateRespawnEnemy(count, Define.PrefabName.StickmanEnemy);
+        }
 
 
         Destroy(gameObject);

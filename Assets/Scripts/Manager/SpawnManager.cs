@@ -63,6 +63,28 @@ public class SpawnManager
         }
     }
 
+    // 적 소환 - 초기레벨 initCount의 경우
+    public void InitInstantiateRespawnEnemy(int initCount, string initObject)
+    {
+        float x = Random.Range(-50f, 50f);
+        float y = Random.Range(-50f, 50f);
+        Vector3 pos = new Vector3(x, 0.5f, y);
+        GameObject enemy = Main.Resource.InstantiatePrefab(initObject, pos, Quaternion.identity);
+
+        StickmanController controller = enemy.GetComponent<StickmanController>();
+        controller.MakeStickman(initCount - 1);
+    }
+
+    private GameObject GetEnemyParent()
+    {
+        GameObject obj = GameObject.FindWithTag("EnemyParent");
+        if (obj == null)
+        {
+            return new() { name = @"EnemyParent", tag = "EnemyParent" };
+        }
+        return obj;
+    }
+
 
     // 중립 스틱맨 소환
     public void InitInstantiateFood(int initCount, string initObject = null, Transform parent = null)
