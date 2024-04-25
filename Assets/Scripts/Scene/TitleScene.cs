@@ -20,9 +20,10 @@ public class TitleScene : BaseScene
 
         // 플레이어 생성
         var stickman = Main.Resource.InstantiatePrefab(Define.PrefabName.Stickman);
-
         Main.Cinemachine.SetPlayerStickmanCamera(stickman.transform);
 
+
+        Main.Audio.BgmPlay(Main.Resource.Load<AudioClip>(Define.Audio_BGM.Title), 0.2f);
 
         //CreatePrefabFromFBX(Main.Resource.Load<GameObject>("Stickman-Model"));
 

@@ -80,7 +80,7 @@ public class Crypto
         }
         catch (Exception ex)
         {
-            //Debug.LogError(ex.Message);
+            Debug.LogError(ex.Message);
             return string.Empty;
         }
     }

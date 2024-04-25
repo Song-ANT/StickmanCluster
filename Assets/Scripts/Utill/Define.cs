@@ -25,7 +25,29 @@ public class Define
         public static string StickmanMaterial = "Skin_Color";
         public static string PlayerCamera = "PlayerCamera";
         public static string SplatEffect = "Splat_";
+
+        public static string AudioSource_sfx = "AudioSource_sfx";
+        public static string AudioSource_bgm = "AudioSource_bgm";
     }
+
+    public struct AudioType
+    {
+        public const string bgm = "BGM";
+        public const string sfx = "SFX";
+        public const string master = "Master";
+    }
+
+    public struct Audio_BGM
+    {
+        public const string Title = "BGM_Title";
+        public const string Game = "BGM_Game";
+    }
+
+    public struct Audio_SFX
+    {
+        public const string StickmanEat = "SFX_StickmanEat";
+    }
+
 
     public struct TagName
     {

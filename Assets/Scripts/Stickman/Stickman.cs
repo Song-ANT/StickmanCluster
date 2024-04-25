@@ -65,6 +65,7 @@ public class Stickman : MonoBehaviour
             }
             else
             {
+                Main.Audio.SfxPlay(Main.Resource.Load<AudioClip>(Define.Audio_SFX.StickmanEat), _controller.transform, 0.6f);
                 Eated();
             }
         }

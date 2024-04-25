@@ -33,6 +33,9 @@ public class GameScene : BaseScene
         // 霸烙 纠 UI 积己
         Main.UI.SetSceneUI<GameSceneUI>();
 
+        // 霸烙 纠 BGM 积己
+        Main.Audio.BgmPlay(Main.Resource.Load<AudioClip>(Define.Audio_BGM.Game), 0.2f);
+
         return true;
     }
 

@@ -17,6 +17,7 @@ public class ResourceManager
         //ResourcesToDictionary<InputActionAsset>();
         ResourcesToDictionary<Material>();
         ResourcesToDictionary<Camera>();
+        ResourcesToDictionary<AudioClip>();
 
         
 
@@ -104,10 +105,10 @@ public class ResourceManager
         return obj;
     }
 
-    public void Destroy(GameObject obj) //프리팹 풀로돌리기 풀없으면 삭제
+    public void Destroy(GameObject obj, bool parent = false) //프리팹 풀로돌리기 풀없으면 삭제
     {
         if (obj == null) return;
-        if (Main.Pool.Push(obj)) return;
+        if (Main.Pool.Push(obj, parent)) return;
 
         UnityEngine.Object.Destroy(obj);
     }
