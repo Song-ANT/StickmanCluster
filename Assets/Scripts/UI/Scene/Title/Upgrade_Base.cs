@@ -30,6 +30,11 @@ public abstract class Upgrade_Base : MonoBehaviour, IUpgrade
         Btn.onClick.AddListener(Upgrade);
     }
 
+    public void OnButtonClickedRemove()
+    {
+        Btn.onClick.RemoveListener(Upgrade);
+    }
+
     public void Upgrade()
     {
         if (_upgrade_Level >= 999) return;

@@ -39,6 +39,15 @@ public class TitleSceneUI : UI_Scene
         return true;
     }
 
+    private void OnDestroy()
+    {
+        startBtn.onClick.RemoveListener(GameStart);
+        soundBtn.onValueChanged.RemoveListener(SoundClicked);
+        startLevel_Btn.OnButtonClickedRemove();
+        speedUp_Btn.OnButtonClickedRemove();
+        foodLevel_Btn.OnButtonClickedRemove();
+    }
+
     private void OnBtnListener()
     {
         startBtn.onClick.AddListener(GameStart);
