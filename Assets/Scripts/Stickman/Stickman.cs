@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CandyCoded.HapticFeedback;
 
 public class Stickman : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class Stickman : MonoBehaviour
         {
             _controller.MakeStickman(EatFoodMakeStickmanCount());
             other.GetComponent<Stickman_Food>().Eated();
+            if(_controller._isPlayer) HapticFeedback.LightFeedback();
         }
 
         if(other.gameObject.layer == LayerMask.NameToLayer("Stickman"))
@@ -62,6 +64,7 @@ public class Stickman : MonoBehaviour
             else if (otherController?.GetLevel() < _controller?.GetLevel())
             {
                 _controller.MakeStickman(1);
+                if(_controller._isPlayer) HapticFeedback.MediumFeedback();
             }
             else
             {
@@ -89,6 +92,7 @@ public class Stickman : MonoBehaviour
     {
         if(_isEated) return;
         _isEated = true;
+        if (_controller._isPlayer) HapticFeedback.MediumFeedback();
         SetIdleAnimation();
         RemoveFromList();
         _controller.SetLevel(false);
@@ -115,5 +119,7 @@ public class Stickman : MonoBehaviour
         //else return 1;
         return _controller.FoodLevel;
     }
+
+    
 
 }
