@@ -33,7 +33,7 @@ public class GameSceneUI : UI_Scene
 
     private bool _isGameOver;
 
-
+    private FadeInOut _fadeInOut;
     public override bool Initialize()
     {
         if (!base.Initialize()) return false;
@@ -42,7 +42,7 @@ public class GameSceneUI : UI_Scene
         _startTime = Define.StartTime;
         BossLv.text = Main.Game.BossLv.ToString();
         _isGameOver = false;
-
+        _fadeInOut = FindObjectOfType<FadeInOut>();
         
 
 
@@ -59,7 +59,8 @@ public class GameSceneUI : UI_Scene
             {
                 //Main.UI.SetSceneUI<GameOverSceneUI>();
                 Main.Player.SetGameRankLevel();
-                SceneManager.LoadScene(Define.SceneName.Boss);
+                //SceneManager.LoadScene(Define.SceneName.Boss);
+                StartCoroutine(_fadeInOut.ChangeScene(Define.SceneName.Boss));
                 _isGameOver = true;
             }
             return;

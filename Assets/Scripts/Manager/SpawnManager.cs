@@ -69,13 +69,16 @@ public class SpawnManager
         float x;
         float y;
         Vector3 pos;
-        do
-        {
-            x = Random.Range(-50f, 50f);
-            y = Random.Range(-50f, 50f);
-            pos = new Vector3(x, 0.5f, y);
+        
+        x = Random.Range(-50f, 50f);
+        y = Random.Range(-50f, 50f);
+        pos = new Vector3(x, 0.5f, y);
 
-        } while (Vector3.Distance(player.position, pos) <= 10);
+        if(Vector3.Distance(player.position, pos) <= 15)
+        {
+            x += Random.Range(0,2) == 0 ? Random.Range(10, 20) : -Random.Range(10, 20);
+            y += Random.Range(0, 2) == 0 ? Random.Range(10, 20) : -Random.Range(10, 20);
+        }
 
         GameObject enemy = Main.Resource.InstantiatePrefab(initObject, pos, Quaternion.identity);
 
