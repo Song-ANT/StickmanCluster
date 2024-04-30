@@ -96,6 +96,6 @@ public class Define
     }
 
 
-    public static int StartTime = 60;
+    public static int StartTime = 10;
    
 }

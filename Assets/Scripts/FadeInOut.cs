@@ -27,7 +27,7 @@ public class FadeInOut : MonoBehaviour
         {
             if(canvasGroup.alpha < 1)
             {
-                canvasGroup.alpha += TimeToFade * Time.deltaTime;
+                canvasGroup.alpha += TimeToFade * Time.unscaledDeltaTime;
 
                 if(canvasGroup.alpha >= 1) fadeIn = false;
             }
@@ -38,7 +38,7 @@ public class FadeInOut : MonoBehaviour
         {
             if (canvasGroup.alpha > 0)
             {
-                canvasGroup.alpha -= TimeToFade * Time.deltaTime;
+                canvasGroup.alpha -= TimeToFade * Time.unscaledDeltaTime;
 
                 if (canvasGroup.alpha <= 0) fadeOut = false;
             }
@@ -59,7 +59,8 @@ public class FadeInOut : MonoBehaviour
     public IEnumerator ChangeScene(string sceneName)
     {
         FadeIn();
-        yield return new WaitForSeconds(1);
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(1);
         SceneManager.LoadScene(sceneName);
     }
 }
