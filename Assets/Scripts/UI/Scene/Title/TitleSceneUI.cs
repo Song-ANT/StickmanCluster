@@ -35,6 +35,7 @@ public class TitleSceneUI : UI_Scene
         //Main.Resource.InstantiatePrefab("TitleShopCamera");
 
         OnBtnListener();
+        SetSoundIcon(Main.Audio.IsMute);
 
         return true;
     }
@@ -62,15 +63,22 @@ public class TitleSceneUI : UI_Scene
         SceneManager.LoadScene(Define.SceneName.Game);
     }
 
-    private void SoundClicked(bool toggle)
+    private void SoundClicked(bool mute)
     {
-        if (toggle)
+        Main.Audio.BgmMuteChange();
+        mute = Main.Audio.IsMute;
+
+        SetSoundIcon(mute);
+    }
+    private void SetSoundIcon(bool mute)
+    {
+        if (mute)
         {
-            soundBtn.GetComponent<Image>().sprite = sound_O_Image;
+            soundBtn.GetComponent<Image>().sprite = sound_X_Image;
         }
         else
         {
-            soundBtn.GetComponent<Image>().sprite = sound_X_Image;
+            soundBtn.GetComponent<Image>().sprite = sound_O_Image;
         }
     }
 

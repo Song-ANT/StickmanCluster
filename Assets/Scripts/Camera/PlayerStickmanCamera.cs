@@ -13,7 +13,7 @@ public class PlayerStickmanCamera : MonoBehaviour
     public void Initialized(Transform player)
     {
         followTarget = player;
-        offset = new Vector3(0, 20, -20);
+        offset = new Vector3(0, 18, -18);
         //lookDirection = new Vector3(-50, 0, 0);
         _camera = transform.GetComponent<CinemachineVirtualCamera>();
         _camera.LookAt = player;

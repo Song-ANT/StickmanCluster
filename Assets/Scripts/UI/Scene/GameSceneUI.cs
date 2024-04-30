@@ -21,7 +21,7 @@ public class GameSceneUI : UI_Scene
     public TextMeshProUGUI Rank3Lv;
 
     //public TextMeshProUGUI Rank4Name;
-    public TextMeshProUGUI Rank4Lv;
+    //public TextMeshProUGUI Rank4Lv;
 
     public GameObject[] PlayerRankIcon;
 
@@ -76,7 +76,7 @@ public class GameSceneUI : UI_Scene
     private void UpdateTopSnakesUI()
     {
         // 상위 4개의 스틱맨 데이터 가져오기
-        List<StickmanData> topStickman = Main.Stickman.GetTopStickman(4);
+        List<StickmanData> topStickman = Main.Stickman.GetTopStickman(3);
 
         int playerRank = -1;
         for(int i = 0; i< topStickman.Count; i++)
@@ -104,11 +104,11 @@ public class GameSceneUI : UI_Scene
             //Rank3Name.text = topStickman[2].name;
             Rank3Lv.text = topStickman[2].level.ToString();
         }
-        if (topStickman.Count > 3)
-        {
-            //Rank4Name.text = topStickman[3].name;
-            Rank4Lv.text = topStickman[3].level.ToString();
-        }
+        //if (topStickman.Count > 3)
+        //{
+        //    //Rank4Name.text = topStickman[3].name;
+        //    Rank4Lv.text = topStickman[3].level.ToString();
+        //}
     }
 
 

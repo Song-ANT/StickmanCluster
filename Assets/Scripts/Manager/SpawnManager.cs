@@ -56,8 +56,8 @@ public class SpawnManager
     {
         for (int i = 0; i < initCount; i++)
         {
-            float x = Random.Range(-60f, 60f);
-            float y = Random.Range(-60f, 60f);
+            float x = Random.Range(-50f, 50f);
+            float y = Random.Range(-50f, 50f);
             Vector3 pos = new Vector3(x, 0.5f, y);
             GameObject enemy = Main.Resource.InstantiatePrefab(initObject, pos, Quaternion.identity);
         }
@@ -71,8 +71,8 @@ public class SpawnManager
         Vector3 pos;
         do
         {
-            x = Random.Range(-60f, 60f);
-            y = Random.Range(-60f, 60f);
+            x = Random.Range(-50f, 50f);
+            y = Random.Range(-50f, 50f);
             pos = new Vector3(x, 0.5f, y);
 
         } while (Vector3.Distance(player.position, pos) <= 10);
@@ -90,9 +90,9 @@ public class SpawnManager
     {
         for (int i = 0; i < initCount; i++)
         {
-            float x = Random.Range(-80f, 80f);
+            float x = Random.Range(-70f, 70f);
             float y = Random.Range(-180f, 180f);
-            float z = Random.Range(-80f, 80f);
+            float z = Random.Range(-70f, 70f);
 
             Vector3 pos = new Vector3(x, 0, z);
             Quaternion rot = Quaternion.Euler(new Vector3(0, y, 0));

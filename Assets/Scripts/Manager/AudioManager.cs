@@ -5,6 +5,11 @@ using UnityEngine;
 public class AudioManager 
 {
     // 3D게임이니까 오디오소스가 그 소리를 내는 오브젝트에 달려있어야한다.
+    private bool _isMute;
+    private AudioSource _currentBgm;
+
+
+    public bool IsMute => _isMute;
 
     public void BgmPlay(AudioClip clip, float volume = 1)
     {
@@ -13,6 +18,8 @@ public class AudioManager
         AudioSource currentBgm = Main.Resource.InstantiatePrefab(Define.PrefabName.AudioSource_bgm).GetComponent<AudioSource>();
         currentBgm.volume = volume;
         currentBgm.clip = clip;
+        if(_isMute) currentBgm.mute = true;
+        _currentBgm = currentBgm;
         currentBgm.Play();
 
     }
@@ -31,8 +38,11 @@ public class AudioManager
 
     }
 
-    public void BtnSound()
+    public void BgmMuteChange()
     {
-        SfxPlay(Main.Resource.Load<AudioClip>("switch37"));
+        _isMute = !_isMute;
+        if(_isMute) _currentBgm.mute = true;
+        else _currentBgm.mute = false;
     }
+   
 }
