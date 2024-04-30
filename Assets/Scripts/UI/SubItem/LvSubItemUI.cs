@@ -21,4 +21,13 @@ public class LvSubItemUI : UI_Base
     {
         LvText.text = level.ToString();
     }
+
+    public void SetLvPos(float size)
+    {
+        var x = gameObject.transform.position.x;
+        var z = gameObject.transform.position.z;
+
+        gameObject.transform.position = new Vector3 (x, size + 2, z);
+        gameObject.transform.localScale = new Vector3(size, size, size);
+    }
 }

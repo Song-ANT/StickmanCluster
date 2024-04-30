@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2625691397354830615}
   - component: {fileID: -2648437179176314529}
   - component: {fileID: 4427772727878681117}
+  - component: {fileID: -4298131554822243105}
   m_Layer: 8
   m_Name: StickmanPlayer
   m_TagString: Player
@@ -45,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfeb8d0793402db448e3810a810cf783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPlayer: 0
+  sizeLevel: 1
 --- !u!135 &4427772727878681117
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -66,3 +69,11 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 2.5, z: 0}
+--- !u!81 &-4298131554822243105
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473845595643663209}
+  m_Enabled: 1

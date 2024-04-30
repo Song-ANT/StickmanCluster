@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,7 +13,7 @@ using Random = UnityEngine.Random;
 public abstract class StickmanController : MonoBehaviour
 {
     private StickmanData _data;
-    protected int _level ;
+    protected int _level;
     private int _initLevel;
     private int _foodLevel;
     private LvSubItemUI _lvUI;
@@ -21,6 +22,7 @@ public abstract class StickmanController : MonoBehaviour
     private float _radius = 1f;
     public bool _isPlayer;
 
+    public int sizeLevel = 0;
 
     private List<GameObject> _stickmans = new List<GameObject>();
     protected List<Stickman> _stickmanChilds = new List<Stickman>();
@@ -47,7 +49,7 @@ public abstract class StickmanController : MonoBehaviour
     {
         if (_isPlayer)
         {
-            _data = Main.Player.AddPlayerStickmanData();
+            _data = Main.Player.AddPlayerStickmanData(this.gameObject);
             _foodLevel = _data.foodLevel;
         }
         else
@@ -76,7 +78,7 @@ public abstract class StickmanController : MonoBehaviour
     private int GetFoodLevel()
     {
         int level = Main.Player.playerData.foodLevel;
-        int rand = Random.Range(-3, 4);
+        int rand = Random.Range(-2, 2);
 
         return (level + rand) > 1 ? level + rand : 1;
     }
@@ -94,17 +96,25 @@ public abstract class StickmanController : MonoBehaviour
 
     public void MakeStickman(int num)
     {
+        
+        int count = _stickmans.Count;
+
         for (int i = 0; i < num; i++)
         {
+            SetLevel(true);
+            if (count >= 30)
+            {
+                continue;
+            }
             var temp = Main.Resource.InstantiatePrefab(Define.PrefabName.Stickman, transform, true);
             _stickmans.Add(temp);
             var stickman = temp.GetComponent<Stickman>();
             stickman.Initialize();
             _stickmanChilds.Add(stickman);
-            SetLevel(true);
+            count++;
         }
 
-        
+
         FormatStickman(num);
     }
 
@@ -113,7 +123,9 @@ public abstract class StickmanController : MonoBehaviour
 
         for (int i = 0; i < _stickmans.Count; i++)
         {
-            _distance = Random.Range(0.5f, 0.6f);
+            float a = 1;
+            for (int j = 0; j < sizeLevel; j++) { a = a * 1.05f; }
+            _distance = Random.Range(0.5f, 0.6f) * a;
             _radius = Random.Range(0.9f, 1f);
 
             var x = _distance * Mathf.Sqrt(i) * Mathf.Cos(i * _radius);
@@ -124,14 +136,11 @@ public abstract class StickmanController : MonoBehaviour
             //var child = transform.GetChild(i);
             var child = _stickmans[i].transform;
 
-            //if (Vector3.Distance(child.position, transform.position) > _distance * Mathf.Sqrt(i))
-            //{
-            //    child.position = transform.position;
-            //}
 
-            
-
+            _stickmanChilds[i].SetMakeMove(true);
+            child.localPosition = Vector3.zero;
             child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
+            _stickmanChilds[i].SetMakeMove(false);
 
             //child.position = newPos;
         }
@@ -142,7 +151,10 @@ public abstract class StickmanController : MonoBehaviour
 
         for (int i = 0; i < _stickmans.Count; i++)
         {
-            _distance = Random.Range(0.5f, 0.6f);
+            float a = 1;
+            for (int j = 0; j < sizeLevel; j++) { a = a * 1.05f; }
+            _distance = Random.Range(0.5f, 0.6f) * a;
+
             _radius = Random.Range(0.9f, 1f);
 
             var x = _distance * Mathf.Sqrt(i) * Mathf.Cos(i * _radius);
@@ -153,15 +165,14 @@ public abstract class StickmanController : MonoBehaviour
             //var child = transform.GetChild(i);
             var child = _stickmans[i].transform;
 
-            //if (Vector3.Distance(child.position, transform.position) > _distance * Mathf.Sqrt(i))
-            //{
-            //    child.position = transform.position;
-            //}
-
-            if(i >= _stickmans.Count - num)
+           
+            if (i >= _stickmans.Count - num)
             {
-                child.position = transform.position;
+                _stickmanChilds[i].SetMakeMove(true);
+                
+                child.localPosition = Vector3.zero;
                 child.DOLocalMove(newPos, 1f).SetEase(Ease.OutBack);
+                _stickmanChilds[i].SetMakeMove(false);
             }
 
 
@@ -178,20 +189,37 @@ public abstract class StickmanController : MonoBehaviour
     public void SetLevel(bool isPositive)
     {
         _level += isPositive ? 1 : -1;
-        
+        bool isTen = _level % 10 == 0;
 
-        if (_isPlayer) 
+        if (_isPlayer)
         {
             Main.Player.ModifyPlayerLv(_level);
-            if(_level % 10 == 0)  Main.Cinemachine.CameraDistanceStart(isPositive);
+            if (isTen) Main.Cinemachine.CameraDistanceStart(isPositive);
         }
+        if (isTen)
+        {
+            sizeLevel += sizeLevel < 20 ? (isPositive ? 1 : -1) : 0;
+            FormatStickman();
+        }
+        
         _data.level = _level;
         Main.Stickman.ModifyStickmanData(_data);
         _lvUI.SetLvText(_level);
-        
+        SetSize();
+
     }
 
+    public void SetSize()
+    {
+        float size = 1 + (0.1f * sizeLevel);
+        _lvUI.SetLvPos(size);
 
+        for (int i = 0; i < _stickmans.Count; i++)
+        {
+            _stickmans[i].transform.localScale = new Vector3(size, size, size);        }
+
+
+    }
 
     public Color SetColor()
     {
@@ -256,7 +284,11 @@ public abstract class StickmanController : MonoBehaviour
             var gameOverUI = Main.UI.SetSceneUI<GameOverSceneUI>();
             //gameOverUI.SetClearGoldText(clearGold);
             Main.Game.SetClearGold(clearGold);
-            if (!IsBossScene()) Main.Player.SetGameRankLevel();
+            if (!IsBossScene())
+            {
+                Main.Cinemachine.Player.GetComponent<AudioListener>().enabled = true;
+                Main.Player.SetGameRankLevel();
+            }
         }
         else if (gameObject.CompareTag(Define.TagName.Boss))
         {
@@ -269,15 +301,18 @@ public abstract class StickmanController : MonoBehaviour
         }
         else
         {
-            int rand = Random.Range(1, 10);
-            int count = Main.Stickman.stickmanData[0].level - rand;
+            int rand = Random.Range(5, 15);
+            //int count = Main.Stickman.stickmanData[0].level - rand;
+            int count = Main.Player.playerData.level - rand;
             count = count > 1 ? count : 1;
-            Main.Spawn.InitInstantiateRespawnEnemy(count, Define.PrefabName.StickmanEnemy);
+            Transform player = Main.Player.PlayerObject.transform;
+
+            Main.Spawn.InitInstantiateRespawnEnemy(count, Define.PrefabName.StickmanEnemy, player);
         }
 
 
         Destroy(gameObject);
-        
+
     }
 
     private int SetClearGold()
@@ -286,7 +321,7 @@ public abstract class StickmanController : MonoBehaviour
         int rank = 10;
 
         var ranking = Main.Stickman.GetTopStickman(10);
-        foreach ( var item in ranking )
+        foreach (var item in ranking)
         {
             if (item.index == _data.index) clearGold += rank;
             rank--;

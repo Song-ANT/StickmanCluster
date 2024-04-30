@@ -20,6 +20,7 @@ public class PlayerManager
         isPlayer = true
     };
 
+    private GameObject _playerObject;
     public Color playerColor;
     private int _playerGold = 0;
     private float _playerMoveSpeed = 5f;
@@ -28,6 +29,7 @@ public class PlayerManager
     private int _gameLevel;
 
 
+    public GameObject PlayerObject => _playerObject;
     public int PlayerGold => _playerGold;
     public float PlayerMoveSpeed => _playerMoveSpeed;
     public int PlayerMoveLevel => _playerMoveLevel;
@@ -37,16 +39,23 @@ public class PlayerManager
 
 
     #region AddStickman
-    public StickmanData AddPlayerStickmanData()
+    public StickmanData AddPlayerStickmanData(GameObject player)
     {
         var data = Main.Stickman.AddStickmanData(playerData.level, playerData.initLevel, playerData.foodLevel, playerData.name);
         Main.Stickman.SetStickmanParts(data, playerData.head_parts);
         Main.Stickman.SetStickmanParts(data, playerData.top_parts);
         Main.Stickman.SetStickmanParts(data, playerData.bottom_parts);
 
+        SetPlayerObject(player);
 
         return data;
     }
+
+    public void SetPlayerObject(GameObject player)
+    {
+        _playerObject = player;
+    }
+
     #endregion
 
 

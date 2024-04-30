@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager 
 {
-    public int BossLv = 200;
+    public int BossLv = 50;
     private int _clearGold = 0;
 
     public int ClearGold => _clearGold;

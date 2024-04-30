@@ -28,7 +28,7 @@ public class GameScene : BaseScene
 
         // 음식 생성
         var foodParent = Main.Resource.InstantiatePrefab("FoodParent");
-        Main.Spawn.InitInstantiateFood(100, null, foodParent.transform);
+        Main.Spawn.InitInstantiateFood(200, null, foodParent.transform);
 
         // 게임 씬 UI 생성
         Main.UI.SetSceneUI<GameSceneUI>();

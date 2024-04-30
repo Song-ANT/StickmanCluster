@@ -11,6 +11,7 @@ public class Stickman : MonoBehaviour
     private bool _isRunParameter;
     public bool _isEated;
     private int _rootCode;
+    private bool _ismakeMove = false;
     
     [HideInInspector] public Rigidbody rb;
     public GameObject body;
@@ -18,7 +19,8 @@ public class Stickman : MonoBehaviour
 
     private void Awake()
     {
-        _animator = transform.GetComponent<Animator>();
+        //_animator = transform.GetComponent<Animator>();
+        _animator = transform.GetComponentInChildren<Animator>();
     }
 
     private void OnDestroy()
@@ -44,6 +46,8 @@ public class Stickman : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (_ismakeMove) return;
+
         if(other.gameObject.layer == LayerMask.NameToLayer("Food"))
         {
             _controller.MakeStickman(EatFoodMakeStickmanCount());
@@ -118,6 +122,11 @@ public class Stickman : MonoBehaviour
         //if (_controller._isPlayer) return Main.Player.playerData.foodLevel;
         //else return 1;
         return _controller.FoodLevel;
+    }
+
+    public void SetMakeMove(bool isMakeMove)
+    {
+        _ismakeMove = isMakeMove;
     }
 
     

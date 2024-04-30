@@ -125,7 +125,7 @@ public class SaveLoadManager
         data.playerMoveLevel = 1;
         data.playerFoodLevel = 1;
 
-        data.BossLevel = 200;
+        data.BossLevel = 50;
     }
 
 

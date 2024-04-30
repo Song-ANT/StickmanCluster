@@ -14,6 +14,8 @@ public class CinemachineManager
     public event Action OnCameraDistanceIncreaseEvent;
     public event Action OnCameraDistanceDecreaseEvent;
 
+    public CinemachineVirtualCamera Player => _playerCamera;
+
     public void SetPlayerStickmanCamera(Transform player)
     {
         _player = player;
