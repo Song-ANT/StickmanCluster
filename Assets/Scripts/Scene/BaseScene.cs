@@ -24,7 +24,7 @@ public class BaseScene : MonoBehaviour
         if (initialized) return false;
 
         Time.timeScale = 1.0f;
-        Main.Resource.InstantiatePrefab("FadeInOut");
+        
         
 
 

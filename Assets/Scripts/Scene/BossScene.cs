@@ -11,6 +11,9 @@ public class BossScene : BaseScene
         Main.Pool.Clear();
         Main.Stickman.ClearStickmanData();
 
+        // 페이드 인
+        Main.Resource.InstantiatePrefab("FadeInOut");
+
         // 바닥 생성
         Main.Resource.InstantiatePrefab(Define.PrefabName.Floor);
 
