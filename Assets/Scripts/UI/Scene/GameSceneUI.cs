@@ -11,17 +11,15 @@ public class GameSceneUI : UI_Scene
 
     public TextMeshProUGUI BossLv;
 
-    //public TextMeshProUGUI Rank1Name;
     public TextMeshProUGUI Rank1Lv;
-
-    //public TextMeshProUGUI Rank2Name;
     public TextMeshProUGUI Rank2Lv;
-
-    //public TextMeshProUGUI Rank3Name;
     public TextMeshProUGUI Rank3Lv;
 
-    //public TextMeshProUGUI Rank4Name;
-    //public TextMeshProUGUI Rank4Lv;
+    public GameObject TimeOver;
+    private TextMeshProUGUI _timeOver_Text;
+    private bool _isTimeOver;
+    public GameObject GameOver;
+
 
     public GameObject[] PlayerRankIcon;
 
@@ -43,6 +41,7 @@ public class GameSceneUI : UI_Scene
         BossLv.text = Main.Game.BossLv.ToString();
         _isGameOver = false;
         _fadeInOut = FindObjectOfType<FadeInOut>();
+        _timeOver_Text = TimeOver.GetComponent<TextMeshProUGUI>();
         
 
 
@@ -52,6 +51,11 @@ public class GameSceneUI : UI_Scene
     private void Update()
     {
         float timeLeft = _startTime - (Time.time - _currentTime);
+        if(!_isTimeOver && timeLeft < 6) 
+        {
+            _isTimeOver = true;
+            TimeOver.SetActive(true);
+        }
         if (timeLeft < 0)
         {
             Timer.text = "00:00";
@@ -62,6 +66,9 @@ public class GameSceneUI : UI_Scene
                 //SceneManager.LoadScene(Define.SceneName.Boss);
                 StartCoroutine(_fadeInOut.ChangeScene(Define.SceneName.Boss));
                 _isGameOver = true;
+
+                TimeOver.SetActive(false);
+                GameOver.SetActive(true);
             }
             return;
         }
@@ -69,6 +76,7 @@ public class GameSceneUI : UI_Scene
         string minutes = ((int)timeLeft / 60).ToString("D2");
         string seconds = ((int)(timeLeft % 60)).ToString("D2");
         Timer.text = minutes + ":" + seconds;
+        if(_isTimeOver) _timeOver_Text.text = minutes + ":" + seconds;
 
         UpdateTopSnakesUI();
     }
